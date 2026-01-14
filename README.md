@@ -9,3 +9,7 @@ Computation and stochastic simulation in insurance, machine learning and deep le
 
 # Contact  
 Feel free to contact me via LinkedIn ([My LinkedIn Profile](https://www.linkedin.com/in/leonardo-valentino-kosasih-4203a1182/)).
+
+# Ideas so Far per 14 Jan 26
+1. Create Premium Allocation Approach calculation model with dummy data and their reconciliation for remeasurement.  
+2. How to make a LfIC (Liability for Incurred Claim) calculation and how will it impact financial disclosure.  
