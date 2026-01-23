@@ -13,3 +13,4 @@ Feel free to contact me via LinkedIn ([My LinkedIn Profile](https://www.linkedin
 # Ideas so Far per 14 Jan 26
 1. Create Premium Allocation Approach calculation model with dummy data and their reconciliation for remeasurement.  
 2. How to make a LfIC (Liability for Incurred Claim) calculation and how it impact financial disclosure.  
+3. Understand [wedge product concept](https://substack.com/@agussudjianto/p-184606453)
