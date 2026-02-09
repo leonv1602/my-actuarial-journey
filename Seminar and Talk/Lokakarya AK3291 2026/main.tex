@@ -16,7 +16,14 @@
     \end{beamercolorbox}%
   }%
 }
-
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 
@@ -68,22 +75,58 @@
     \item Financial Disclosure 
   \end{enumerate}
 \end{frame}
-\begin{frame}{Out of Scope}
-\begin{enumerate}
-\item Reinsurance Contract Held
-\item Shariah Insurance
-\end{enumerate}
-\end{frame}
-\begin{frame}{My Personal Goal from Today's Session}
+
+\begin{frame}[allowframebreaks]{My Personal Goal from Today's Session}
 \begin{enumerate}
   \item Sharing 30\% accounting knowledge 70\% actuarial application
   \item Showing you some memes along the presentation so keep your eyes open :D
   \item Audit is about how you think, not just what you do.
-  \item \text{ }
+  \item Prevent one of these things to happen to you during your first internship/job
+  \begin{center}\includegraphics[width=0.8\linewidth,height=0.5\textheight,keepaspectratio]{actuary meme first day.png}
+  \end{center} (Thanks to: \href{https://actuarialtutor.uk/memes/}{John Lee})
+   \framebreak
+  \item Your natural reaction after the sharing session:
     \begin{center}
       \includegraphics[width=0.65\linewidth,height=0.38\textheight,keepaspectratio]{cinema.jpeg}
     \end{center}
 \end{enumerate}
+\end{frame}
+
+\begin{frame}{Out of Scope}
+\begin{enumerate}
+\item Reinsurance Contract Held
+\item Shariah Insurance
+\item Goodwill 
+\item Insurance Merger and Acquisition (M\&A)
+\item Making you an IFRS17 wizard
+\end{enumerate}
+\end{frame}
+\begin{frame}{Meme I have to put in but don't think fit anywhere in the topic}
+  \begin{center}
+soon
+  \end{center} 
+\end{frame}
+\begin{frame}{Disclaimer}
+  \vspace{0.3em}
+  \begin{tcolorbox}[
+    title=\textbf{Please read},
+    colback=blue!5,
+    colframe=blue!70!black,
+    coltitle=white,
+    colbacktitle=blue!70!black,
+    fonttitle=\bfseries,
+    boxrule=0.9pt,
+    arc=3pt,
+    left=8pt,right=8pt,top=6pt,bottom=6pt
+  ]
+  \small
+  \begin{itemize}
+    \item \textbf{Purpose:} knowledge sharing / general educational content.
+    \item \textbf{Not advice:} this is \emph{not} actuarial, accounting, audit, or legal advice.
+    \item \textbf{Use at your own risk:} any reliance or decisions are the user’s responsibility.
+    \item \textbf{No liability:} the presenter and affiliated institutions are not liable for any loss, damage, or claim arising from use or interpretation of these slides.
+  \end{itemize}
+  \end{tcolorbox}
 \end{frame}
 \section{Actuarial Science and Accounting}
 
@@ -114,8 +157,8 @@ In (re)insurance one of the International Financial Reporting Standards (IFRS) w
 Doing the actuarial audit, means that we need to check the documentation, assumptions used and whether it align with the standards.
 \end{frame}
 
-\begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet}
-Below is the Prudential Life \href{https://www.prudentialplc.com/en/newsroom/company-news/2025/prudential-plc-2024-full-year-results/}{IFRS17 disclosure} access on 6 February 2026.
+\begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet - Life Insurance}
+Below is the Prudential Life snapshots of \href{https://www.prudentialplc.com/en/newsroom/company-news/2025/prudential-plc-2024-full-year-results/}{IFRS17 disclosure} access on 6 February 2026.
 
   \begin{columns}[T,onlytextwidth]
     \column{0.5\textwidth}
@@ -129,13 +172,32 @@ Below is the Prudential Life \href{https://www.prudentialplc.com/en/newsroom/com
 Observe that the Insurance Contract Liabilities (ICL) is around 80\% of the total equity and liabilities, which make it more important to verify whether the amount is correct.
 \end{frame}
 
-\begin{frame}{Example of IFRS17 Financial Statement - Profit and Loss}
+\begin{frame}{Example of IFRS17 Financial Statement - Profit and Loss - Life Insurance}
   \begin{center}
   \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{PL Prudential.png}
   \end{center} 
 Top 4 of the largest line items are investment return, net insurance and reinsurance finance epxense insurance revenue and insurance service expenses
 \end{frame}
 
+\begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet - General Insurance}
+Below is the Zurich Insurance snapshots of \href{https://edge.sitecorecloud.io/zurichinsur6934-zwpcorp-prod-ae5e/media/project/zurich/dotcom/investor-relations/docs/results/2024/q4/consolidated-financial-statements-annual-results-2024.pdf/}{IFRS17 disclosure} access on 9 February 2026.
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+      \centering
+      \includegraphics[width=0.98\linewidth,height=0.78\textheight,keepaspectratio]{FS Zurich - Asset.png}
+
+    \column{0.5\textwidth}
+      \centering
+      \includegraphics[width=0.98\linewidth,height=0.78\textheight,keepaspectratio]{FS Zurich - Liabilities and Equity.png}
+  \end{columns}
+Observe that the Insurance Contract Liabilities (ICL) is around 60\% of the total equity and liabilities, which make it more important to verify whether the amount is correct.
+\end{frame}
+
+\begin{frame}{Example of IFRS17 Financial Statement - Profit and Loss - General Insurance}
+  \begin{center}
+  \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{PL Zurich.png}
+  \end{center} 
+\end{frame}
 
 \section{What is an Insurance Contract}
 
@@ -197,7 +259,7 @@ The additional amounts above are determined on a present-value basis.
 
 Or as an actuary, this means to:
 \begin{equation}
-\frac{\sum_{i} E\[\text{PVCF}_{i,\text{ claim event}\]}}{\sum_{i} E\[\text{PVCF}_{i,\text{ no claim event}\]}}
+\frac{\sum_{i} E\left[ \text{PVCF}_{i,\text{ claim event}} \right]}{\sum_{i} E \left[ \text{PVCF}_{i,\text{ no claim event}}\right]}
 \end{equation}
 \end{frame}
 
@@ -210,7 +272,7 @@ From this section, now you know how to answer this question from a very famous \
 
 \section{LfRC (Liability for Remaining Coverage)}
 
-\begin{frame}{Where's My Money}
+\begin{frame}{Where's My Money?}
   \begin{center}
   \begin{tikzpicture}[
     node distance=0mm and 4.5mm,
@@ -229,7 +291,7 @@ From this section, now you know how to answer this question from a very famous \
   \end{tikzpicture}
   \end{center}
 We are going to take a closer look on the lifecyle of an insurance from previous slide and ask ourselves, "what happened to the money after policyholders pay the premium? Does the insurer just keep the money in a bank? Pay claims to other policyholder? or just hope that no claim will submitted ?\\
-When the insurance are issued, the insurance directly become a liability of the insurrer meaning that the insurance company is liable to pay the policy holder if a claim event happened. But it doesn't mean that every insurance will be a libility to the insurance company. There will be some cases where the insurance can be an assets (as we see in the previous balance sheet example).
+When the insurance issued, the insurance directly become a liability to the insurrer meaning that the insurance company is liable to pay the policy holder if a claim event happened. But it doesn't mean that every insurance will be a libility to the insurance company. There will be some cases where the insurance can be an assets (as we see in the previous balance sheet examples).
 \end{frame}
 
 \begin{frame}{What's inside the Insurance Contract Liability (ICL)?}
@@ -282,7 +344,47 @@ When the insurance are issued, the insurance directly become a liability of the 
   \end{center}
 \end{frame}
 
-\begin{frame}{LfRC building blocks: BEL, RA, CSM, LC}
+\begin{frame}{Level of Aggregation (LoA)}
+Before we move to the building blocks, and measurement model, IFRS17 requires to aggregate (group) insurance contracts into portfolios. IFRS~17 is clear on how contracts should be grouped. There are three criteria:
+\begin{itemize}
+  \item Similar risk: product type or characteristics (e.g., premium payment mode),
+  \item Profitability: expected profitability of the product,
+  \item Annual cohort: issue year of the insurance contract. IFRS17 prohibits to include contracts issued more than one year apart in the same group 
+\end{itemize} 
+\footnotesize
+\textit{Source: IFRS~17, Par. 14, 16, 22}\\
+\normalsize
+This aggregation is done only at the initial recognition of the contract
+\footnotesize
+\textit{Source: IFRS~17, Par. 24}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Level of Aggregation (LoA) - Profitability}
+IFRS17 requires that the product is divided at least into 3 profitability group i.e.,:
+\begin{itemize}
+  \item Onerous at initial recognition
+  \item No Significant Possibility of Becoming Onerous (NSPBO) 
+  \item Remaining
+\end{itemize}
+\footnotesize
+\textit{Source: IFRS~17, Par. 16} \\
+\normalsize
+IFRS17 defines onerous insurance contract at the date of initial recognition if the \textbf{Fulfilment Cash Flows (FCF)} allocated to the contract, any previously recognised \textbf{Insurance Acquisition Cash Flows (IACF)} and any cash flows arising from the contract at the date of initial recognition in total are a \textbf{\textcolor{red}{net outflow}}. \\ 
+\footnotesize
+\textit{Source: IFRS~17, Par. 47} \\
+\framebreak
+\normalsize
+There is no specific guideline from IFRS~17 in determining NSPBO and remaining category, but it requires an insurance company to assess the methodology to tag NSPBO or remaining category based on \begin{itemize}
+  \item likelihood of changes in assumptions which, if they
+occurred, would result in the contracts becoming onerous 
+\item using information about estimates provided by the entity’s internal
+reporting 
+\end{itemize}
+\footnotesize
+\textit{Source: IFRS~17, Par. 19} \\
+\normalsize
+\end{frame}
+\begin{frame}{Building Block ICL}
   Under the general model, measurement is commonly described via building blocks:
   \[
     \text{Fulfilment Cash Flows (FCF)}
@@ -297,6 +399,7 @@ When the insurance are issued, the insurance directly become a liability of the 
   \end{itemize}
 \end{frame}
 
+\section{Generated by Prism.ai not updated yet}
 \begin{frame}{Measurement models: GMM vs VFA vs PAA}
   \begin{tcolorbox}[title=Quick map]
   \begin{itemize}

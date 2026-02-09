@@ -382,6 +382,9 @@ INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgf
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\tcolorbox\tcbposter.code.tex
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\main.aux
+INPUT .\main.aux
+INPUT main.aux
 OUTPUT main.aux
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -391,6 +394,12 @@ INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT .\main.out
+INPUT .\main.out
+INPUT main.out
+INPUT main.out
+INPUT .\main.out
+INPUT .\main.out
 OUTPUT main.out
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\translator\translator-basic-dictionary-English.dict
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\translator\translator-basic-dictionary-English.dict
@@ -423,6 +432,13 @@ INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss12.tf
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\leona\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\actuary meme first day.png
+INPUT .\actuary meme first day.png
+INPUT .\actuary meme first day.png
+INPUT .\actuary meme first day.png
+INPUT .\actuary meme first day.png
+INPUT .\actuary meme first day.png
+INPUT .\actuary meme first day.png
 INPUT .\cinema.jpeg
 INPUT .\cinema.jpeg
 INPUT .\cinema.jpeg
@@ -430,6 +446,10 @@ INPUT .\cinema.jpeg
 INPUT .\cinema.jpeg
 INPUT .\cinema.jpeg
 INPUT .\cinema.jpeg
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssi10.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss17.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss12.tfm
 INPUT .\meme-accountant-actuary-1.jpg
@@ -468,7 +488,27 @@ INPUT .\PL Prudential.png
 INPUT .\PL Prudential.png
 INPUT .\PL Prudential.png
 INPUT .\PL Prudential.png
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
+INPUT .\FS Zurich - Asset.png
+INPUT .\FS Zurich - Asset.png
+INPUT .\FS Zurich - Asset.png
+INPUT .\FS Zurich - Asset.png
+INPUT .\FS Zurich - Asset.png
+INPUT .\FS Zurich - Asset.png
+INPUT .\FS Zurich - Asset.png
+INPUT .\FS Zurich - Liabilities and Equity.png
+INPUT .\FS Zurich - Liabilities and Equity.png
+INPUT .\FS Zurich - Liabilities and Equity.png
+INPUT .\FS Zurich - Liabilities and Equity.png
+INPUT .\FS Zurich - Liabilities and Equity.png
+INPUT .\FS Zurich - Liabilities and Equity.png
+INPUT .\FS Zurich - Liabilities and Equity.png
+INPUT .\PL Zurich.png
+INPUT .\PL Zurich.png
+INPUT .\PL Zurich.png
+INPUT .\PL Zurich.png
+INPUT .\PL Zurich.png
+INPUT .\PL Zurich.png
+INPUT .\PL Zurich.png
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssi9.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
@@ -506,8 +546,6 @@ INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -529,12 +567,8 @@ INPUT .\main.out
 INPUT .\main.out
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
