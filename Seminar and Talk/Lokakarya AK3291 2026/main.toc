@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Actuarial Science and Accounting}{5}{0}{1}
+\beamer@sectionintoc {2}{What is an Insurance Contract}{10}{0}{2}
+\beamer@sectionintoc {3}{LfRC (Liability for Remaining Coverage)}{16}{0}{3}
+\beamer@sectionintoc {4}{LfIC (Liability for Incurred Claims)}{23}{0}{4}
+\beamer@sectionintoc {5}{Financial Disclosure and Statement Mapping}{27}{0}{5}
