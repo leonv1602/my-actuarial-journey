@@ -546,6 +546,13 @@ INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -567,8 +574,6 @@ INPUT .\main.out
 INPUT .\main.out
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
@@ -589,9 +594,3 @@ INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi8.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi9.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi9.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1770643613.50258 "c:/Users/leona/Documents/GitHub/my-actuarial-journey/Seminar and Talk/Lokakarya AK3291 2026/main.tex" "main.pdf" "main" 1770643619.41919 0
+["pdflatex"] 1770728754.60381 "c:/Users/leona/Documents/GitHub/my-actuarial-journey/Seminar and Talk/Lokakarya AK3291 2026/main.tex" "main.pdf" "main" 1770728761.04759 0
   "C:/Users/leona/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770601563 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/leona/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1767359522 13333486 59645c53095151bbca40ad47c8ae7bb5 ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -29,7 +29,6 @@
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/tfm/public/sansmathaccent/mathkerncmssi10.tfm" 1363549528 1696 aaa5bbd1f47f001247d42218ce371101 ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/tfm/public/sansmathaccent/mathkerncmssi8.tfm" 1363549514 1676 fb6c6a335484692abff897d6e8965829 ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
-  "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1247596666 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb" 1247596666 24393 3b7eb51a67a0a62aec5849271bdb9c2e ""
@@ -40,9 +39,6 @@
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb" 1247596666 25150 e0d09798d232ab9d00c5c0a8df6cc22d ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb" 1247596667 25168 c89d909bac101e478326bb9e00519ca3 ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi9.pfb" 1247596666 25029 6f2cec9646ca278302ed7d604e506e3e ""
-  "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
-  "C:/Users/leona/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Users/leona/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -265,12 +261,13 @@
   "PL Zurich.png" 1770636726 135200 a1463b3f266ee87bcc8b6fba5b3f665f ""
   "Patrick Mayonnaise.png" 1770456789 266849 804b75396a50ad89a671bab9fc67d63b ""
   "actuary meme first day.png" 1770638090 570884 588f01863078202e30d41599d6756c2a ""
-  "c:/Users/leona/Documents/GitHub/my-actuarial-journey/Seminar and Talk/Lokakarya AK3291 2026/main.tex" 1770643605 22175 ad1c0c9d003fbfeedeee1c3aed2a436f ""
+  "bel ra csm.png" 1770725191 368502 7ae728cd517821e2a36f18244cec4093 ""
+  "c:/Users/leona/Documents/GitHub/my-actuarial-journey/Seminar and Talk/Lokakarya AK3291 2026/main.tex" 1770728747 22922 8485e031d7f504c9a8e96ec78f0452c9 ""
   "cinema.jpeg" 1770456789 8398 edc540642b3fa92e1469e66f74e58e63 ""
-  "main.aux" 1770643618 7528 827d0db0d70e3336a96e5a66015b4a04 "pdflatex"
-  "main.nav" 1770643618 4931 70771ffa8cd90bade113d9fef9459f0b "pdflatex"
-  "main.out" 1770643618 1417 05411d21ff9410122192b1d070a8d4b2 "pdflatex"
-  "main.tex" 1770643605 22175 ad1c0c9d003fbfeedeee1c3aed2a436f ""
+  "main.aux" 1770728760 8826 26fb2404d2f06b25d872c6bd4aaa688e "pdflatex"
+  "main.nav" 1770728760 5824 2f974830d407762ae5582a6e2704bcac "pdflatex"
+  "main.out" 1770728760 1494 f020c129c2a6aa6515303e203eb07c38 "pdflatex"
+  "main.tex" 1770728747 22922 8485e031d7f504c9a8e96ec78f0452c9 ""
   "meme-accountant-actuary-1.jpg" 1770456789 74375 48c83a8172bc41b29a24b8ff0ab71707 ""
   "meme-accountant-actuary-2.jpg" 1770456789 56612 fe32cde3f233eb2274bf06530d25f8fd ""
   (generated)
