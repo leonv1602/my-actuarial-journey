@@ -18,22 +18,21 @@
 }
 
 \usepackage{amsmath,amssymb}
+% Removed some rarely-used/conflicting packages for beamer to improve compatibility:
+% - chemarr, nomencl, float, wrapfig, subcaption
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage[export]{adjustbox}
 \usepackage{graphicx}
-
-\usepackage{booktabs}
-\usepackage{array}
-\usepackage{siunitx}
-\sisetup{detect-all}
-
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,fit,calc}
-
+\usetikzlibrary{arrows.meta,positioning,fit,calc,decorations.pathreplacing}
 \usepackage[most]{tcolorbox}
 \tcbset{colback=gray!6,colframe=black!35,boxrule=0.6pt,arc=2pt}
-
-% beamer already loads hyperref; configure it here to avoid option clashes
 \hypersetup{hidelinks}
-
 \title[IFRS 17 Actuarial Audit]{Introduction to Actuarial Audit under IFRS~17}
 \author{Leonardo Valentino Kosasih}
 \institute{Institut Teknologi Bandung}
@@ -66,7 +65,7 @@
     \item Scope of IFRS~17
     \item Recognition and Measurement under IFRS~17
     \item Remeasurement
-    \item Financial Disclousre
+    \item Financial Disclosure
   \end{enumerate}
 \end{frame}
 
@@ -122,6 +121,36 @@ soon
   \end{itemize}
   \end{tcolorbox}
 \end{frame}
+\section{Prolog: Why Actuarial Audit ?}
+\begin{frame}{Audit and Actuarial Audit}
+An audit in finance and accounting is a comprehensive examination of an organization's financial records conducted by qualified professionals. These experts meticulously review financial statements to confirm their accuracy, ensure compliance with applicable regulations, and corroborate that the information fairly represents the organization's financial position. This includes the income statement, balance sheet, and cash flow statement.\footnote{\href{https://www.investopedia.com/terms/a/audit.asp}{Investopedia}} \\
+Actuarial audit is just the subset of audit where the object audited is mostly provided or done by actuaries.\\
+\begin{tcolorbox}[colback=green!5,colframe=green!40!black,title=So does this still applicable if I work in non actuarial field related ?]
+%\includegraphics[width=0.5\linewidth,height=0.68\textheight,keepaspectratio]{Well_Yes,_But_Actually_No.jpg}
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}{Audit Challenge}
+Insurance company usually relies on software that deals with hundreds of thousands or even billions of rows of data and there is no way one can check all the data by the naked eye. This gives another challenge to auditors where the engagement is relatively short (3--5 months), but needs to verify all the business activities done by the company for a certain period (usually quarterly, semi-annually or annually). This means an auditor needs to be efficient with time, focus on high-risk items and communicate clearly what they need from the company.\\
+There are 3 approaches that auditor can do to verify the financial statement, i.e., population, sample and analytical and the most important item require before the audit is \textbf{data reconciliation}. Due to the size of data, auditor need to first verify the data given by the company. Whether it is 
+\begin{enumerate}
+\item \textbf{consistent}, does the amount noted is the same with the previous report or other document ?
+\item \textbf{make sense}, e.g., does it normal for a life insurance to have a high amount of claim reserve ? does the change is similar with last year ? 
+\item \textbf{accurate}, does the amount in the financial statement is correctly copied or correctly calculated ? 
+\end{enumerate}
+The tool that can help to capture the movement of the data is by doing a \textbf{waterfall  chart} or a \textit{walk} on the amount movement. 
+The main issue in my 3 years of experience doing actuarial audit is the timeline always coincide with monthly reporting to OJK (Indonesia Financial Service Authority) which kind of a hiccup during the audit. But, is this always the case? Are there any preventive or smart ways to help auditor to meet their deadline and to minimize the conflict that may or may not occured during the engagement? The answer number 3 will shock you     
+\end{frame}
+
+\begin{frame}{Audit is A State of Mind}
+  Sure these things are the responsible for an auditor to check and the auditor will get paid auditing the full year data. But who really responsible to ensure the data or the calculation done correctly? 
+  \begin{center}
+  \textbf{The company!}
+  \end{center}   
+  We can agree that all these calculation or this reporting is done by human who gives input to a machine and therefore it will always expose to human error. But by having a view on auditor as a co-worker rather than a piggybacking person, it can significantly improves the productivity of the company. \\
+  By having a well documented workflow, actuary can ask better question and can do more productive work.
+\end{frame}
+
 \section{Actuarial Science and Accounting}
 
 \begin{frame}{Actuaries and Accountants}
@@ -141,7 +170,7 @@ soon
   Why do these memes exist? Is it true? (Credit to:\href{https://actuarialtutor.uk/memes/}{John Lee})
 \end{frame}
 
-\begin{frame}{Accounting Standars for Insurance} 
+\begin{frame}{Accounting Standards for Insurance} 
 In (re)insurance one of the International Financial Reporting Standards (IFRS) we use is IFRS 17 : Insurance Contract. In every IFRS, it has 3 major sections:
 \begin{enumerate}
   \item Scope: which items are covered by the IFRS (accounting),
@@ -163,14 +192,14 @@ Below is the Prudential Life snapshots of \href{https://www.prudentialplc.com/en
       \centering
       \includegraphics[width=0.98\linewidth,height=0.78\textheight,keepaspectratio]{FS Prudential - Liabilities and Equity.png}
   \end{columns}
-Observe that the Insurance Contract Liabilities (ICL) is around 80\% of the total equity and liabilities, which make it more important to verify whether the amount is correct.
+Observe that the Insurance Contract Liabilities (ICL) are around 80\% of the total equity and liabilities, which makes it more important to verify whether the amount is correct.
 \end{frame}
 
 \begin{frame}{Example of IFRS17 Financial Statement - Profit and Loss - Life Insurance}
   \begin{center}
   \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{PL Prudential.png}
   \end{center} 
-Top 4 of the largest line items are investment return, net insurance and reinsurance finance epxense insurance revenue and insurance service expenses
+Top 4 of the largest line items are investment return, net insurance and reinsurance finance expense, insurance revenue and insurance service expenses
 \end{frame}
 
 \begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet - General Insurance}
@@ -239,7 +268,7 @@ The additional amounts above are determined on a present-value basis.
 \normalsize
 
 \framebreak
-\textbf{The additional ammounts} refer to the present value of amounts that exceed those that would be payable if no insured event had occurred (excluding scenarios that lack commercial substance). Those additional amounts include claims handling and assessment costs, but exclude:
+\textbf{The additional amounts} refer to the present value of amounts that exceed those that would be payable if no insured event had occurred (excluding scenarios that lack commercial substance). Those additional amounts include claims handling and assessment costs, but exclude:
 \begin{itemize}
   \item the loss of the ability to charge the policyholder for future service, 
   \item a waiver, on death, of charges that would be made on cancellation or surrender, %for example death due to war, suicide, the terms that make the contract invalid
@@ -285,7 +314,7 @@ From this section, now you know how to answer this question from a very famous \
   \end{tikzpicture}
   \end{center}
 We are going to take a closer look on the lifecyle of an insurance from previous slide and ask ourselves, "what happened to the money after policyholders pay the premium? Does the insurer just keep the money in a bank? Pay claims to other policyholder? or just hope that no claim will submitted ?\\
-When the insurance issued, the insurance directly become a liability to the insurrer meaning that the insurance company is liable to pay the policy holder if a claim event happened. But it doesn't mean that every insurance will be a libility to the insurance company. There will be some cases where the insurance can be an assets (as we see in the previous balance sheet examples).
+When the insurance is issued, the contract generally becomes a liability to the insurer meaning that the insurance company is liable to pay the policyholder if a claim event happens. But it doesn't mean that every contract will be a liability to the insurance company; there are cases where the contract is presented as an asset (as in the previous balance sheet examples).
 \end{frame}
 
 \begin{frame}{What's inside the Insurance Contract Liability (ICL)?}
@@ -431,23 +460,23 @@ What interesting in the paragraph above is that we may use a lower or higher dis
 \end{frame}
 
 \begin{frame}{Measurement Model}
-Explain on there are differents model for different type of insurance (GMM, PAA, and VFA). 
-It is optional to use GMM or PAA but it is mandatory to use VFA if the insurance contract, pass the eligibility.
+Explain that there are different models for different types of insurance (GMM, PAA, and VFA).
+Use of GMM or PAA is optional, but VFA is mandatory if the insurance contract passes the eligibility criteria.
 \end{frame}
 
 \begin{frame}{GMM}
-  All model
+  GMM — General measurement model
 \end{frame}
 
 \begin{frame}{VFA}
-  VFA direct participating
+  VFA — Direct participating contracts
 \end{frame}
 
 \begin{frame}{PAA}
-PAA short term  
+PAA — Short-term
 \end{frame}
 
-\begin{frame}{Bit of Bonus on Transisition Method}
+\begin{frame}{Bit of Bonus on Transition Method}
 This is actually a set up to ending remarks. 
 FVA, FRA, MRA
 \end{frame}
@@ -481,7 +510,37 @@ But can LfIC be calculated at initial recognition?
 \end{frame}
 
 \begin{frame}{IBNR}
-  put my undergrad thesis a bit and a bit from exam 5
+  			\begin{figure}
+				\centering  
+				\begin{tikzpicture}
+					% draw horizontal line   
+					\draw (0,0) -- (11,0);
+					% draw vertical lines
+					\foreach \x in {1,3,5,6,7,10}
+					\draw (\x cm,3pt) -- (\x cm,-3pt);
+					
+					% draw nodes
+					\draw (1,0) node[below=3pt] {$t_{\text{event}}$} node[above=3pt] {Event};
+					\draw (3,0) node[below=3pt] {$t_{\text{report}}$} node[above=3pt] {Report};
+					\draw (5,0) node[below=3pt] {$t_{1}$};
+					\draw (6,0) node[below=3pt] {$t_{2}$}node[above=0.7cm] {Claims Payments};
+					\draw (7,0) node[below=3pt] {$t_{3}$};
+					\draw (10,0) node[below=3pt] {$t_{\text{settlement}}$} node[above=12pt] {Claims Closing};
+					
+					% Draw Arrows 
+					\draw[->](7,0.6) -- (7,0);
+					\draw[->](6,0.6) -- (6,0);
+					\draw[->](5,0.6) -- (5,0);	
+					
+					% Draw Braces 
+					\draw [cyan, decorate, decoration = {brace, raise=5pt,	amplitude=5pt}] (3,-0.6) --  (1,-0.6) ;
+					\draw (2, -0.8) node[below=3pt] {\textcolor{cyan}{Reporting Delay}};
+					\draw [blue,decorate, decoration = {brace, raise=5pt,	amplitude=5pt}] (10,-0.6) --  (3,-0.6) ;
+					\draw (6.5, -0.8) node[below=3pt] {\textcolor{blue}{\textit{Settlement Delay}}};
+				\end{tikzpicture}
+	\end{figure} 
+  This event is what we call Incurred But Not (yet) Reported (IBNR). All IBNR claims will be the insurer's liability that will be reported in the financial statements. So the insurer needs to reserve the \textbf{right amount} of claim so that the reserve won't be too small (i.e., the insurer will not be able to pay claims) nor too large (i.e., the insurer's liability will be overstated).\\
+  Include reference to exam 5 material.
 \end{frame}
 
 \section{Generated by Prism.ai not updated yet}
