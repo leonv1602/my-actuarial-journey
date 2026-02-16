@@ -1,7 +1,6 @@
 \documentclass[aspectratio=169]{beamer}
 
 \usetheme{Madrid}
-% Remove the default parentheses around the institute in the footline
 \setbeamertemplate{footline}{%
   \leavevmode%
   \hbox{%
@@ -121,65 +120,15 @@ soon
   \end{itemize}
   \end{tcolorbox}
 \end{frame}
-\section{Prolog: Why Actuarial Audit ?}
+\section{Prolog: What is Actuarial Audit ?}
 \begin{frame}{Audit and Actuarial Audit}
-An audit in finance and accounting is a comprehensive examination of an organization's financial records conducted by qualified professionals. These experts meticulously review financial statements to confirm their accuracy, ensure compliance with applicable regulations, and corroborate that the information fairly represents the organization's financial position. This includes the income statement, balance sheet, and cash flow statement.\footnote{\href{https://www.investopedia.com/terms/a/audit.asp}{Investopedia}} \\
+An audit in finance and accounting is a comprehensive examination of an organization's financial records conducted by qualified professionals. These experts meticulously review financial statements to confirm their accuracy, ensure compliance with applicable regulations, and corroborate that the information fairly represents the organization's \textbf{financial position}. This includes the \textbf{income statement}, \textbf{balance sheet}, and cash flow statement.\footnote{\href{https://www.investopedia.com/terms/a/audit.asp}{Investopedia}} \\
 Actuarial audit is just the subset of audit where the object audited is mostly provided or done by actuaries.\\
 \begin{tcolorbox}[colback=green!5,colframe=green!40!black,title=So does this still applicable if I work in non actuarial field related ?]
 %\includegraphics[width=0.5\linewidth,height=0.68\textheight,keepaspectratio]{Well_Yes,_But_Actually_No.jpg}
 \end{tcolorbox}
 \end{frame}
-
-\begin{frame}{Audit Challenge}
-Insurance company usually relies on software that deals with hundreds of thousands or even billions of rows of data and there is no way one can check all the data by the naked eye. This gives another challenge to auditors where the engagement is relatively short (3--5 months), but needs to verify all the business activities done by the company for a certain period (usually quarterly, semi-annually or annually). This means an auditor needs to be efficient with time, focus on high-risk items and communicate clearly what they need from the company.\\
-There are 3 approaches that auditor can do to verify the financial statement, i.e., population, sample and analytical and the most important item require before the audit is \textbf{data reconciliation}. Due to the size of data, auditor need to first verify the data given by the company. Whether it is 
-\begin{enumerate}
-\item \textbf{consistent}, does the amount noted is the same with the previous report or other document ?
-\item \textbf{make sense}, e.g., does it normal for a life insurance to have a high amount of claim reserve ? does the change is similar with last year ? 
-\item \textbf{accurate}, does the amount in the financial statement is correctly copied or correctly calculated ? 
-\end{enumerate}
-The tool that can help to capture the movement of the data is by doing a \textbf{waterfall  chart} or a \textit{walk} on the amount movement. 
-The main issue in my 3 years of experience doing actuarial audit is the timeline always coincide with monthly reporting to OJK (Indonesia Financial Service Authority) which kind of a hiccup during the audit. But, is this always the case? Are there any preventive or smart ways to help auditor to meet their deadline and to minimize the conflict that may or may not occured during the engagement? The answer number 3 will shock you     
-\end{frame}
-
-\begin{frame}{Audit is A State of Mind}
-  Sure these things are the responsible for an auditor to check and the auditor will get paid auditing the full year data. But who really responsible to ensure the data or the calculation done correctly? 
-  \begin{center}
-  \textbf{The company!}
-  \end{center}   
-  We can agree that all these calculation or this reporting is done by human who gives input to a machine and therefore it will always expose to human error. But by having a view on auditor as a co-worker rather than a piggybacking person, it can significantly improves the productivity of the company. \\
-  By having a well documented workflow, actuary can ask better question and can do more productive work.
-\end{frame}
-
-\section{Actuarial Science and Accounting}
-
-\begin{frame}{Actuaries and Accountants}
-  \vspace{-0.3em}
-  \begin{columns}[T,onlytextwidth]
-    \column{0.5\textwidth}
-      \centering
-      \includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{meme-accountant-actuary-1.jpg}
-
-    \column{0.5\textwidth}
-      \centering
-      \includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{meme-accountant-actuary-2.jpg}
-  \end{columns}
-
-  \vspace{0.3em}
-  \footnotesize
-  Why do these memes exist? Is it true? (Credit to:\href{https://actuarialtutor.uk/memes/}{John Lee})
-\end{frame}
-
-\begin{frame}{Accounting Standards for Insurance} 
-In (re)insurance one of the International Financial Reporting Standards (IFRS) we use is IFRS 17 : Insurance Contract. In every IFRS, it has 3 major sections:
-\begin{enumerate}
-  \item Scope: which items are covered by the IFRS (accounting),
-  \item Recognition and Measurement: how to record the initial balance (actuarial science),
-  \item Disclosure: how to present the result in financial disclosures (accounting).
-\end{enumerate}
-Doing the actuarial audit, means that we need to check the \textbf{documentation, assumptions used} and whether it align with the \textbf{standards}.
-\end{frame}
-
+%%%%% 
 \begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet - Life Insurance}
 Below is the Prudential Life snapshots of \href{https://www.prudentialplc.com/en/newsroom/company-news/2025/prudential-plc-2024-full-year-results/}{IFRS17 disclosure} access on 6 February 2026.
 
@@ -221,6 +170,73 @@ Observe that the Insurance Contract Liabilities (ICL) is around 60\% of the tota
   \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{PL Zurich.png}
   \end{center} 
 \end{frame}
+
+\begin{frame}[allowframebreaks]{Audit Challenge}
+Insurance company usually relies on software that deals with hundreds of thousands or even billions of rows of data and there is no way one can check all the data by the naked eye. This gives another challenge to auditors where the engagement is \textbf{relatively short} (3--5 months), but needs to verify all the business activities done by the company for a \textbf{certain period} (usually quarterly, semi-annually or annually). This means an auditor needs to be efficient with time, focus on high-risk items and communicate clearly what they need from the company.\\
+There are 3 approaches that auditor can do to verify the financial statement, i.e., \textbf{population}, \textbf{sample} and \textbf{analytical} and the most important item require before the audit is \textbf{data reconciliation}. Due to the size of data, auditor need to first verify the data given by the company. Whether it is 
+\begin{enumerate}
+\item \textbf{consistent}, does the amount noted is the same with the previous report or other document ?
+\item \textbf{make sense}, e.g., does it normal for a life insurance to have a high amount of claim reserve ? does the change is similar with last year ? 
+\item \textbf{accurate}, does the amount in the financial statement is correctly copied or correctly calculated? 
+\item \textbf{complete}, has all the component in certain accounting item has fully calculated?
+\end{enumerate}
+We can agree that it is tedious work to reconcile data over and over again. A particular tool that can help to capture/record the movement of the data is by doing a \textbf{waterfall  chart} or a \textit{walk} from the initial or verified amount into the most recent amount. 
+\end{frame}
+
+\begin{frame}{My Actuarial Audit Experience}
+In my experience, the audit progress usually goes like this \\
+\texit{to be inputted to prism or other ai tools to make the graphs}
+\begin{enumerate}
+\item Kick-off meeting: where we align the scope of audit, the procedure to verify the numbers, project timeline and last year finding/observation (if any)
+\item Initial data request: product listing of the Insurance Contract Liabilities (ICL), trial balance, assumptions and model changes documentation.  
+\item Reconciliation between the product listing and the trial balance, and the walk or changes happened from last audit/year to current year.
+\item Assumption checks: where we review the assumptions used for the current year calculation. The major assumptions are: mortality rate, morbidity rate, lapse/surrender rate, expense assumptions, and discount rate.
+\item New Business assessment: profit tagging, measurement model used, and portfolio/product grouping.
+\item Sampling process: where we pick samples to check. The samples are consist of, (Re)Insurance Contract Groups (ICG/RCG), product, and policies.
+\item Model Baselining: where we recalculate or assess the reasonableness of the reserve calculation in policy and ICG level. Insurance companies usually use, Prophet, RAFM (Risk Agile FM), and AXIS.  
+\item Financial Disclosure: where we reconcile the changes due to remeasurement is correctly presented in the financial disclosure
+\end{enumerate}
+The main issue in my 3 years of experience doing actuarial audit is the timeline always coincide with monthly reporting to OJK (Indonesia Financial Service Authority) which kind of a hiccup during the audit. But, is this always the case? Are there any preventive or smart ways to help auditor to meet their deadline and to minimize the conflict that may or may not occured during the engagement? The answer number 3 will shock you     
+\end{frame}
+
+\begin{frame}{Audit is A State of Mind}
+  Sure these things are the responsible for an auditor to check and the auditor will get paid by auditing the full year data. But who really responsible to ensure the data or the calculation done correctly? 
+  \begin{center}
+  \textbf{The company!}
+  \end{center}   
+  We can agree that all these calculation or this reporting is done by human who gives input to a machine and therefore it will always expose to human error. But by having a view on auditor as a co-worker rather than a piggybacking person, it can significantly improves the productivity of the company. \\
+  By having a well documented workflow, actuary can ask better question and can do more productive work.
+\end{frame}
+
+\section{Actuarial Science and Accounting}
+
+\begin{frame}{Actuaries and Accountants}
+  \vspace{-0.3em}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{meme-accountant-actuary-1.jpg}
+
+    \column{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{meme-accountant-actuary-2.jpg}
+  \end{columns}
+
+  \vspace{0.3em}
+  \footnotesize
+  Why do these memes exist? Is it true? (Credit to:\href{https://actuarialtutor.uk/memes/}{John Lee})
+\end{frame}
+
+\begin{frame}{Accounting Standards for Insurance} 
+In (re)insurance one of the International Financial Reporting Standards (IFRS) we use is IFRS 17 : Insurance Contract. In every IFRS, it has 3 major sections:
+\begin{enumerate}
+  \item Scope: which items are covered by the IFRS (accounting),
+  \item Recognition and Measurement: how to record the initial balance (actuarial science),
+  \item Disclosure: how to present the result in financial disclosures (accounting).
+\end{enumerate}
+Doing the actuarial audit, means that we need to check the \textbf{documentation, assumptions used} and whether it align with the \textbf{standards}.
+\end{frame}
+
 
 \section{Overview of IFRS~17}
 
