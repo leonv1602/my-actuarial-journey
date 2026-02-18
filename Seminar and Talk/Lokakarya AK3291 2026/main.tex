@@ -15,7 +15,8 @@
     \end{beamercolorbox}%
   }%
 }
-
+\usepackage{pgfplots}
+\usepackage{booktabs}
 \usepackage{amsmath,amssymb}
 % Removed some rarely-used/conflicting packages for beamer to improve compatibility:
 % - chemarr, nomencl, float, wrapfig, subcaption
@@ -26,6 +27,13 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{xcolor}
+
+% Custom colors
+\definecolor{spotblue}{RGB}{30,120,200}
+\definecolor{fwdorange}{RGB}{220,100,30}
+\definecolor{impliedpurple}{RGB}{120,60,180}
+\definecolor{shadeblue}{RGB}{220,235,255}
+
 \usepackage[normalem]{ulem}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,fit,calc,decorations.pathreplacing}
@@ -90,7 +98,8 @@
 \item Shariah Insurance
 \item Goodwill 
 \item Insurance Merger and Acquisition (M\&A)
-\item Making you an IFRS17 wizard
+\item Making you an IFRS17 wizard 
+\item Time Value of Options and Guarantees (TVOG)
 \end{enumerate}
 \end{frame}
 \begin{frame}{Meme I have to put in but don't think fit anywhere in the topic}
@@ -124,9 +133,11 @@ soon
 \begin{frame}{Audit and Actuarial Audit}
 An audit in finance and accounting is a comprehensive examination of an organization's financial records conducted by qualified professionals. These experts meticulously review financial statements to confirm their accuracy, ensure compliance with applicable regulations, and corroborate that the information fairly represents the organization's \textbf{financial position}. This includes the \textbf{income statement}, \textbf{balance sheet}, and cash flow statement.\footnote{\href{https://www.investopedia.com/terms/a/audit.asp}{Investopedia}} \\
 Actuarial audit is just the subset of audit where the object audited is mostly provided or done by actuaries.\\
-\begin{tcolorbox}[colback=green!5,colframe=green!40!black,title=So does this still applicable if I work in non actuarial field related ?]
-%\includegraphics[width=0.5\linewidth,height=0.68\textheight,keepaspectratio]{Well_Yes,_But_Actually_No.jpg}
-\end{tcolorbox}
+%\begin{tcolorbox}[colback=green!5,colframe=green!40!black,title=So does this still applicable if I work in non actuarial field related ?]
+%\begin{center}
+%  \includegraphics[width=0.3\linewidth,height=0.4\textheight,keepaspectratio]{Well_Yes,_But_Actually_No.jpg}
+%\end{center}
+%\end{tcolorbox}
 \end{frame}
 %%%%% 
 \begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet - Life Insurance}
@@ -173,19 +184,40 @@ Observe that the Insurance Contract Liabilities (ICL) is around 60\% of the tota
 
 \begin{frame}[allowframebreaks]{Audit Challenge}
 Insurance company usually relies on software that deals with hundreds of thousands or even billions of rows of data and there is no way one can check all the data by the naked eye. This gives another challenge to auditors where the engagement is \textbf{relatively short} (3--5 months), but needs to verify all the business activities done by the company for a \textbf{certain period} (usually quarterly, semi-annually or annually). This means an auditor needs to be efficient with time, focus on high-risk items and communicate clearly what they need from the company.\\
-There are 3 approaches that auditor can do to verify the financial statement, i.e., \textbf{population}, \textbf{sample} and \textbf{analytical} and the most important item require before the audit is \textbf{data reconciliation}. Due to the size of data, auditor need to first verify the data given by the company. Whether it is 
+There are 3 approaches that auditor can do to verify the financial statement, i.e., \textbf{population}, \textbf{sample} and \textbf{analytical} and the most important item require before the audit is \textbf{data reconciliation}. \\
+Due to the size of data, auditor need to first verify the data given by the company. Whether it is 
 \begin{enumerate}
 \item \textbf{consistent}, does the amount noted is the same with the previous report or other document ?
-\item \textbf{make sense}, e.g., does it normal for a life insurance to have a high amount of claim reserve ? does the change is similar with last year ? 
+\item \textbf{sensicle}, e.g., does it normal for a life insurance to have a high amount of claim reserve ? does the change is similar with last year ? 
 \item \textbf{accurate}, does the amount in the financial statement is correctly copied or correctly calculated? 
 \item \textbf{complete}, has all the component in certain accounting item has fully calculated?
 \end{enumerate}
 We can agree that it is tedious work to reconcile data over and over again. A particular tool that can help to capture/record the movement of the data is by doing a \textbf{waterfall  chart} or a \textit{walk} from the initial or verified amount into the most recent amount. 
+A simple walk of number of policies can be seen below:
+\begin{table}[ht]
+\centering
+\caption{Policy Count Movement --- Full Year 202X}
+\vspace{4pt}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Item} & \textbf{Movement} & \textbf{Policies in Force} \\
+\midrule
+Opening Balance (1 Jan 202X)  &          & 100,000 \\
+\addlinespace
+New Business                  & +12,000  & 112,000 \\
+\addlinespace
+Deaths                        &    --500 & 111,500 \\
+Surrenders                    &  --3,000 & 108,500 \\
+Maturities                    &  --4,500 & 104,000 \\
+\midrule
+Closing Balance (31 Dec 202X) &  +4,000  & 104,000 \\
+\bottomrule
+\end{tabular}
+\end{table}
 \end{frame}
 
-\begin{frame}{My Actuarial Audit Experience}
-In my experience, the audit progress usually goes like this \\
-\texit{to be inputted to prism or other ai tools to make the graphs}
+\begin{frame}[allowframebreaks]{My Actuarial Audit Experience}
+In my experience, the audit project usually goes like this \\
 \begin{enumerate}
 \item Kick-off meeting: where we align the scope of audit, the procedure to verify the numbers, project timeline and last year finding/observation (if any)
 \item Initial data request: product listing of the Insurance Contract Liabilities (ICL), trial balance, assumptions and model changes documentation.  
@@ -205,7 +237,7 @@ The main issue in my 3 years of experience doing actuarial audit is the timeline
   \textbf{The company!}
   \end{center}   
   We can agree that all these calculation or this reporting is done by human who gives input to a machine and therefore it will always expose to human error. But by having a view on auditor as a co-worker rather than a piggybacking person, it can significantly improves the productivity of the company. \\
-  By having a well documented workflow, actuary can ask better question and can do more productive work.
+  By having a well documented workflow, auditors can easily verify the result calculated and the actuaries can do more productive work.
 \end{frame}
 
 \section{Actuarial Science and Accounting}
@@ -383,6 +415,33 @@ When the insurance is issued, the contract generally becomes a liability to the 
   \end{center}
 \end{frame}
 
+\begin{frame}[allowframebreaks]{Some Quick Definitions}
+Liability for Remaining Coverage (LfRC): is an entity’s obligation to:
+\begin{enumerate}
+  \item investigate and pay valid claims under existing insurance contracts for insured events that \textbf{have not yet occurred} (i.e., the obligation that relates to the unexpired portion of the insurance coverage); and
+  \item pay amounts under existing insurance contracts that are not included in (1) and that relate to:
+  \begin{enumerate}
+    \item insurance contract services not yet provided (i.e., the obligations that relate to future provision of insurance contract services); or 
+    \item any investment components or other amounts that are not related to the provision of insurance contract services and that have not been transferred to the Liability for Incurred Claims (LfIC)
+  \end{enumerate}
+\end{enumerate}
+\framebreak
+Liability for Incurred Claims (LfIC): is an entity’s obligation to:
+\begin{enumerate}
+  \item investigate and pay valid claims for insured events that have \textbf{already occurred}, including events that have occurred but for which claims have not been reported, and other incurred insurance expenses; and 
+  \item pay amounts that are not included in (1) and that relate to:\begin{enumerate}
+  \item insurance contract services that have already been provided; or
+  \item any investment components or other amounts that are not related to the provision of insurance contract services and that are not in the Liability for Remaining Coverage (LfRC).
+  \end{enumerate}
+  \vspace{0.2em}
+  \footnotesize
+  \textit{Source: IFRS~17, Appendix A (Definitions).}
+
+  \vspace{0.4em}
+\end{enumerate}
+\end{frame}
+
+
 \begin{frame}{Level of Aggregation (LoA)}
 Before we move to the building blocks, and measurement model, IFRS17 requires to aggregate (group) insurance contracts into portfolios. IFRS~17 is clear on how contracts should be grouped. There are three criteria:
 \begin{itemize}
@@ -393,7 +452,7 @@ Before we move to the building blocks, and measurement model, IFRS17 requires to
 \footnotesize
 \textit{Source: IFRS~17, Para. 14, 16, 22}\\
 \normalsize
-This aggregation is done only at the initial recognition of the contract
+This aggregation is done only at the initial recognition of the contract. \\
 \footnotesize
 \textit{Source: IFRS~17, Para. 24}
 \end{frame}
@@ -445,10 +504,30 @@ We can re-write FCF in a more familiar term to be:
 where BEL stands for Best Estimate Liability. However we are going to discuss on, which future cash flow should be included in BEL calculation, how to choose the discount rate and how to calculate RA.
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Contract Boundary}
-  Tomorrow's problems
+\begin{frame}[allowframebreaks]{Cashflow in Scope Boundary}
+  Cash flows within the boundary of an insurance contract are those that relate directly to the fulfilment of the contract, including cash flows for which the entity has discretion over the amount or timing. IFRS 17 provides the following
+examples of such cash flows:
+\begin{enumerate}
+  \item Premiums
+  \item Payments, including claims, to a policyholder
+  \item Payments to a policyholder that vary based on underlying items
+  \item Payments to a policyholder resulting from derivatives 
+  \item Insurance acquisition cash flows
+  \item Claims handling costs 
+  \item Costs incurred in providing contractual benefits in kind 
+  \item Policy administration and maintenance costs 
+  \item Transaction-based taxes and levies 
+  \item Payments by the insurer of tax in a fiduciary capacity 
+  \item Potential cash inflows from recoveries 
+  \item An allocation of fixed and variable overheads 
+  \item Costs the entity will incur in providing an investment activity, an investment-return service or an investment-related service
+  \item Any other costs specifically chargeable to the policyholder 
+\end{enumerate}
+\footnotesize
+\textit{Source: IFRS~17, Para. B65} \\
+\normalsize
 \end{frame}
-\begin{frame}{Discount Rate}
+\begin{frame}[allowframebreaks]{Discount Rate}
 The discount rates applied to the estimates of the future cash flows described previously shall: 
 \begin{enumerate}
 \item reflect the time value of money, the characteristics of the cash flows and the \textbf{liquidity characteristics} of the insurance contracts;
@@ -458,18 +537,81 @@ The discount rates applied to the estimates of the future cash flows described p
 \footnotesize
 \textit{Source: IFRS~17, Para. 36} \\
 \normalsize
-What interesting in the paragraph above is that we may use a lower or higher discount rate based on the liquidity characteristcs of the insurance contracts which means there is an additional assessment on how to determine how liquid is an insurance contract and the corresponding \textit{buffer} one should add or substract from the current discount rate.
+What interesting in the paragraph above is that we may use a lower or higher discount rate based on the liquidity characteristcs of the insurance contracts which means there is an additional assessment on how to determine how liquid is an insurance contract and the corresponding \textit{buffer} one should add or substract from the current discount rate. But how to calculate this?
+\end{frame}
+\begin{frame}[allowframebreaks]{Spot Rate and Forward Rate}
+We define spot rate $s_t$ to be the annual effective interest rate earned by money invested \textbf{now} (time 0) for a period of $t$ years. (Spot rates are sometimes called zero-coupon rates.) While (implied) forward rates $f_t$ is the annual effective interest rate earned by money invested \textbf{$t_1$} (time 0) for a period of $t_2$ years.
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance = 0pt,
+  box/.style    = {draw, rounded corners=4pt, minimum width=2cm,
+                   minimum height=0.9cm, font=\small, inner sep=6pt},
+  arr/.style    = {->, >=stealth, thick},
+]
+
+%% Timeline
+\draw[gray!60, line width=1pt] (0,0) -- (11,0);
+\foreach \x/\lbl in {0/0, 4.5/$t_2$, 10/$t_1$}{
+  \draw[gray!60] (\x,-0.15) -- (\x,0.15);
+  \node[below, font=\small] at (\x,-0.18) {\lbl};
+}
+
+%% Path A – direct to t1
+\node[box, fill=spotblue!15, draw=spotblue, text=spotblue!80!black]
+  (A0) at (0, 1.5) {\$1};
+\node[box, fill=spotblue!15, draw=spotblue, text=spotblue!80!black]
+  (A1) at (10,1.5) {$(1+s_{t_1})^{t_1}$};
+\draw[arr, spotblue, line width=1.8pt] (A0) -- (A1)
+  node[midway, above, font=\scriptsize, spotblue]
+    {invest at spot $s_{t_1}$ for $t_1$ years};
+
+%% Path B – to t2 then roll forward
+\node[box, fill=fwdorange!15, draw=fwdorange, text=fwdorange!80!black]
+  (B0) at (0,-1.5) {\$1};
+\node[box, fill=fwdorange!15, draw=fwdorange, text=fwdorange!80!black]
+  (B1) at (4.5,-1.5) {$(1+s_{t_2})^{t_2}$};
+\node[box, align = center, fill=fwdorange!15, draw=fwdorange, text=fwdorange!80!black]
+  (B2) at (10,-1.5) {$(1+s_{t_2})^{t_2}$\\$\times(1+f_{t_2,t_1})^{t_1-t_2}$};
+\draw[arr, fwdorange, line width=1.8pt] (B0) -- (B1)
+  node[midway, below, font=\scriptsize, fwdorange]
+    {spot $s_{t_2}$};
+\draw[arr, fwdorange, line width=1.8pt] (B1) -- (B2)
+  node[midway, below, font=\scriptsize, fwdorange]
+    {fwd $f_{t_2,t_1}$};
+
+%% Equality brace
+\draw[impliedpurple, very thick, <->] (10, 0.9) -- (10,-0.9);
+\node[impliedpurple, right, font=\footnotesize] at (10.1,0)
+  {\textbf{No-arb} $\Rightarrow$ equal};
+
+%% Label paths
+\node[spotblue, font=\small\bfseries, left] at (-0.1, 1.5)
+  {Path A};
+\node[fwdorange, font=\small\bfseries, left] at (-0.1,-1.5)
+  {Path B};
+
+\end{tikzpicture}
+\end{center}
+
+In Indonesia, the yield rate data is published by \href{https://www.phei.co.id/Data/HPW-dan-Imbal-Hasil}{Indonesia Bond Pricing Agency (IBPA)}. Due note that the rate in this website is \textbf{not} a zero-coupon rates, therefore we need to calculate the spot rate by ourselves using bootstraping method.
 \end{frame}
 
 \begin{frame}{Risk Adjustment}
-  
+Risk Adjusment for non-financial risk (RA) is the compensation an entity requires for bearing the uncertainty about the amount and timing of the cash flows that arises from non-financial risk as the entity fulfils insurance contracts.
+  \vspace{0.2em}
+  \footnotesize
+  \textit{Source: IFRS~17, Appendix A (Definitions).}
+
+  \vspace{0.4em}
 \end{frame}
 
 \begin{frame}{CSM and LC}
   
 \end{frame}
 
-\begin{frame}{Will always be}
+\begin{frame}{Quick Break 2.0}
+In insurance business, we will be friend with these 3 items
   \begin{center}
     \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{bel ra csm.png}
   \end{center}
