@@ -425,6 +425,12 @@ INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfit.code.tex
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybending.code.tex
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybending.code.tex
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmodulebending.code.tex
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmodulenonlineartransformations.code.tex
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibrarycurvilinear.code.tex
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibrarycurvilinear.code.tex
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\tcolorbox\tcolorbox.sty
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\tcolorbox\tcolorbox.sty
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\tex\latex\tools\verbatim.sty
@@ -639,8 +645,8 @@ INPUT .\meme-accountant-actuary-2.jpg
 INPUT .\meme-accountant-actuary-2.jpg
 INPUT .\meme-accountant-actuary-2.jpg
 INPUT .\meme-accountant-actuary-2.jpg
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssi9.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssi9.tfm
 INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
@@ -648,6 +654,28 @@ INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
 INPUT .\Patrick Mayonnaise.png
+INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcss1000.tfm
+INPUT .\PHEI.png
+INPUT .\PHEI.png
+INPUT .\PHEI.png
+INPUT .\PHEI.png
+INPUT .\PHEI.png
+INPUT .\PHEI.png
+INPUT .\PHEI.png
+INPUT .\PHEI Bond.png
+INPUT .\PHEI Bond.png
+INPUT .\PHEI Bond.png
+INPUT .\PHEI Bond.png
+INPUT .\PHEI Bond.png
+INPUT .\PHEI Bond.png
+INPUT .\PHEI Bond.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
+INPUT .\bel ra csm.png
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
@@ -656,15 +684,6 @@ INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi10.tfm
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi8.tfm
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcss1000.tfm
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
-INPUT .\bel ra csm.png
-INPUT .\bel ra csm.png
-INPUT .\bel ra csm.png
-INPUT .\bel ra csm.png
-INPUT .\bel ra csm.png
-INPUT .\bel ra csm.png
-INPUT .\bel ra csm.png
 OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm
@@ -675,10 +694,6 @@ INPUT C:\Users\leona\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcs
 INPUT C:\Users\leona\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcss1000.pk
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
@@ -699,9 +714,3 @@ INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi8.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi9.pfb
 INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi9.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy9.pfb
-INPUT C:\Users\leona\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy9.pfb

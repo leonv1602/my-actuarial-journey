@@ -36,7 +36,7 @@
 
 \usepackage[normalem]{ulem}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,fit,calc,decorations.pathreplacing}
+\usetikzlibrary{arrows.meta,positioning,fit,calc,decorations.pathreplacing,bending}
 \usepackage[most]{tcolorbox}
 \tcbset{colback=gray!6,colframe=black!35,boxrule=0.6pt,arc=2pt}
 \hypersetup{hidelinks}
@@ -67,6 +67,7 @@
 
 \begin{frame}{Agenda}
   \begin{enumerate}
+    \item Prolog: What is Actuarial Audit ?
     \item Actuarial Science and Accounting
     \item Overview of IFRS~17
     \item Scope of IFRS~17
@@ -94,19 +95,19 @@
 
 \begin{frame}{Out of Scope}
 \begin{enumerate}
+\item Making you an IFRS17 wizard
+\item Time Value of Options and Guarantees (TVOG)
 \item Reinsurance Contract Held
 \item Shariah Insurance
 \item Goodwill 
 \item Insurance Merger and Acquisition (M\&A)
-\item Making you an IFRS17 wizard 
-\item Time Value of Options and Guarantees (TVOG)
 \end{enumerate}
 \end{frame}
-\begin{frame}{Meme I have to put in but don't think fit anywhere in the topic}
-  \begin{center}
-soon
-  \end{center} 
-\end{frame}
+%\begin{frame}{Meme I have to put in but don't think fit anywhere in the topic}
+%  \begin{center}
+%soon
+%  \end{center} 
+%\end{frame}
 \begin{frame}{Disclaimer}
   \vspace{0.3em}
   \begin{tcolorbox}[
@@ -228,7 +229,6 @@ In my experience, the audit project usually goes like this \\
 \item Model Baselining: where we recalculate or assess the reasonableness of the reserve calculation in policy and ICG level. Insurance companies usually use, Prophet, RAFM (Risk Agile FM), and AXIS.  
 \item Financial Disclosure: where we reconcile the changes due to remeasurement is correctly presented in the financial disclosure
 \end{enumerate}
-The main issue in my 3 years of experience doing actuarial audit is the timeline always coincide with monthly reporting to OJK (Indonesia Financial Service Authority) which kind of a hiccup during the audit. But, is this always the case? Are there any preventive or smart ways to help auditor to meet their deadline and to minimize the conflict that may or may not occured during the engagement? The answer number 3 will shock you     
 \end{frame}
 
 \begin{frame}{Audit is A State of Mind}
@@ -266,12 +266,140 @@ In (re)insurance one of the International Financial Reporting Standards (IFRS) w
   \item Recognition and Measurement: how to record the initial balance (actuarial science),
   \item Disclosure: how to present the result in financial disclosures (accounting).
 \end{enumerate}
-Doing the actuarial audit, means that we need to check the \textbf{documentation, assumptions used} and whether it align with the \textbf{standards}.
+Doing the actuarial audit, means that we need to check the \textbf{documentation, assumptions used} and whether it align with the \textbf{standards}.\\
+It is said that doing IFRS17 would required at least 3 parties, i.e., accounting, actuarial, and IT. We are going to see in this session why this will be the case.
 \end{frame}
 
 
 \section{Overview of IFRS~17}
+\begin{frame}{Where's My Money?}
+  \begin{center}
+  \begin{tikzpicture}[
+    node distance=0mm and 4.5mm,
+    box/.style={draw, rounded corners, align=center, fill=blue!4, inner sep=2.2pt, font=\scriptsize, text width=0.20\linewidth, minimum height=8mm},
+    arr/.style={-{Stealth[length=2.0mm]}, thick}
+  ]
+    \node[box] (uw) {\textbf{1. Underwriting}};
+    \node[box, right=of uw] (prem) {\textbf{2. Premiums Collections}};
+    \node[box, right=of prem] (claims) {\textbf{3. Claim Events}};
+    \node[box, right=of claims] (end) {\textbf{4. End}};
 
+    \draw[arr] (uw) -- (prem);
+    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (prem.south) -- ++(0,-6mm) -| (end.south);
+    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (prem) -- (claims);
+    \draw[arr] (claims) -- (end);
+  \end{tikzpicture}
+  \end{center}
+We are going to take a closer look on the \textbf{lifecyle} of an insurance from previous slide and ask ourselves, "what happened to the money after policyholders pay the premium? Does the insurer just keep the money in a bank? Pay claims to other policyholder? or just hope that no claim will submitted ?\\
+When the insurance is \textbf{issued}, the contract generally becomes a \textbf{liability} to the insurer meaning that the insurance company is liable to pay the policyholder if a claim event happens. But it doesn't mean that every contract will be a liability to the insurance company; there are cases where the contract is presented as an asset (as in the previous balance sheet examples).
+\end{frame}
+
+\begin{frame}{What's inside the Insurance Contract Liability (ICL)?}
+  \vspace{0.2em}
+  \begin{center}
+\begin{tikzpicture}[
+  font=\small,
+  main/.style={draw, rounded corners, fill=blue!10, inner sep=8pt, align=center, minimum width=40mm},
+  mid/.style={draw, rounded corners, fill=green!15, inner sep=8pt, align=center, minimum width=35mm},
+  leaf/.style={draw, rounded corners, fill=black!8, inner sep=6pt, align=center, minimum width=20mm},
+  bar/.style={line width=1.2pt},
+  arr/.style={-{Stealth[length=2mm]}, line width=1.2pt}
+]
+  % Top level
+  \node[main] (icl) {\textbf{ICL}};
+  
+  % Two main components - positioned manually for exact control
+  \node[mid, below left=15mm and 3mm of icl] (lfrc) {\textbf{LfRC}};
+  \node[mid, below right=15mm and 3mm of icl] (lfic) {\textbf{LfIC}};
+  
+  % Split from ICL
+  \coordinate (split1) at ($(icl.south)+(0,-7.5mm)$);
+  \draw[bar] (icl.south) -- (split1);
+  \draw[bar] (split1 -| lfrc) -- (split1 -| lfic);
+  \draw[arr] (split1 -| lfrc) -- (lfrc.north);
+  \draw[arr] (split1 -| lfic) -- (lfic.north);
+  
+  % LfRC breakdown: BEL, RA, CSM (3 equal boxes)
+  \node[leaf, below=12mm of lfrc, xshift=-22mm] (lfrc-bel) {\textbf{BEL}};
+  \node[leaf, below=12mm of lfrc] (lfrc-ra) {\textbf{RA}};
+  \node[leaf, below=12mm of lfrc, xshift=22mm] (lfrc-csm) {\textbf{CSM}};
+  
+  \coordinate (split2) at ($(lfrc.south)+(0,-6mm)$);
+  \draw[bar] (lfrc.south) -- (split2);
+  \draw[bar] (split2 -| lfrc-bel) -- (split2 -| lfrc-csm);
+  \draw[arr] (split2 -| lfrc-bel) -- (lfrc-bel.north);
+  \draw[arr] (split2 -| lfrc-ra) -- (lfrc-ra.north);
+  \draw[arr] (split2 -| lfrc-csm) -- (lfrc-csm.north);
+  
+  % LfIC breakdown: only BEL
+  \node[leaf, below=12mm of lfic, xshift=-12mm] (lfic-bel) {\textbf{BEL}};
+  \node[leaf, below=12mm of lfic, xshift=12mm] (lfic-ra) {\textbf{RA}}; 
+  
+  \coordinate (split3) at ($(lfic.south)+(0,-6mm)$);
+  \draw[bar] (lfic.south) -- (split3);
+  \draw[bar] (split3 -| lfic-bel) -- (split3 -| lfic-ra);
+  \draw[arr] (split3 -| lfic-bel) -- (lfic-bel.north);
+  \draw[arr] (split3 -| lfic-ra) -- (lfic-ra.north);
+\end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Some Quick Definitions}
+Liability for Remaining Coverage (LfRC): is an entity’s obligation to:
+\begin{enumerate}
+  \item investigate and pay valid claims under existing insurance contracts for insured events that \textbf{have not yet occurred} (i.e., the obligation that relates to the unexpired portion of the insurance coverage); and
+  \item pay amounts under existing insurance contracts that are not included in (1) and that relate to:
+  \begin{enumerate}
+    \item insurance contract services not yet provided (i.e., the obligations that relate to future provision of insurance contract services); or 
+    \item any investment components or other amounts that are not related to the provision of insurance contract services and that have not been transferred to the Liability for Incurred Claims (LfIC)
+  \end{enumerate}
+\end{enumerate}
+
+  \vspace{0.2em}
+  \footnotesize
+  \textit{Source: IFRS~17, Appendix A (Definitions)}\\
+  \vspace{0.4em}
+  \normalsize
+  \framebreak
+Liability for Incurred Claims (LfIC): is an entity’s obligation to:
+\begin{enumerate}
+  \item investigate and pay valid claims for insured events that have \textbf{already occurred}, including events that have occurred but for which claims have not been reported, and other incurred insurance expenses; and 
+  \item pay amounts that are not included in (1) and that relate to:\begin{enumerate}
+  \item insurance contract services that have already been provided; or
+  \item any investment components or other amounts that are not related to the provision of insurance contract services and that are not in the Liability for Remaining Coverage (LfRC).
+  \end{enumerate}
+\end{enumerate}
+
+  \vspace{0.2em}
+  \footnotesize
+  \textit{Source: IFRS~17, Appendix A (Definitions)}
+  \vspace{0.4em}
+  \normalsize
+\end{frame}
+\begin{frame}{What happened to the premium so far}
+Based on the explanation so far, we can see that the paid premium will directly become an LfRC and the LfRC will be an LfIC if claim event happened.
+  \begin{center}
+  \begin{tikzpicture}[
+    node distance=0mm and 4.5mm,
+    box/.style={draw, rounded corners, align=center, fill=blue!4, inner sep=2.2pt, font=\scriptsize, text width=0.20\linewidth, minimum height=8mm},
+    arr/.style={-{Stealth[length=2.0mm]}, thick}
+  ]
+    \node[box] (prem) {\textbf{1. Premiums}};
+    \node[box, right=of prem] (lfrc) {\textbf{2. LfRC}};
+    \node[box, below=5mm of lfrc] (lfic) {\textbf{3. LfIC}};
+    \node[box, right=50mm of prem] (end) {\textbf{4. End}};
+
+    \draw[arr] (prem) -- (lfrc);
+    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (lfrc.south) -- (lfic.north);
+    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (lfrc.east) -- (end.west);
+    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (lfic.east) -- (end.west);
+
+  \end{tikzpicture}
+  \end{center}
+In the next slides, we will go deeper into how to calculate LfRC and LfIC.
+\end{frame}
+
+\section{Recognition and Measurement under IFRS~17}
 \begin{frame}{Introduction to Insurance Contract}
   \textbf{Insurance contract} is a contract under which one party (the issuer) accepts \textbf{significant insurance risk} from another party (the policyholder) by agreeing to \textbf{compensate} the policyholder if a specified \textbf{uncertain future event} (the insured event) adversely affects the policyholder.
 
@@ -341,109 +469,8 @@ From this section, now you know how to answer this question from a very famous \
 \end{center}
 \end{frame}
 
-\section{Recognition and Measurement under IFRS~17}
-
-\begin{frame}{Where's My Money?}
-  \begin{center}
-  \begin{tikzpicture}[
-    node distance=0mm and 4.5mm,
-    box/.style={draw, rounded corners, align=center, fill=blue!4, inner sep=2.2pt, font=\scriptsize, text width=0.20\linewidth, minimum height=8mm},
-    arr/.style={-{Stealth[length=2.0mm]}, thick}
-  ]
-    \node[box] (uw) {\textbf{1. Underwriting}};
-    \node[box, right=of uw] (prem) {\textbf{2. Premiums Collections}};
-    \node[box, right=of prem] (claims) {\textbf{3. Claim Events}};
-    \node[box, right=of claims] (end) {\textbf{4. End}};
-
-    \draw[arr] (uw) -- (prem);
-    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (prem.south) -- ++(0,-6mm) -| (end.south);
-    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (prem) -- (claims);
-    \draw[arr] (claims) -- (end);
-  \end{tikzpicture}
-  \end{center}
-We are going to take a closer look on the lifecyle of an insurance from previous slide and ask ourselves, "what happened to the money after policyholders pay the premium? Does the insurer just keep the money in a bank? Pay claims to other policyholder? or just hope that no claim will submitted ?\\
-When the insurance is issued, the contract generally becomes a liability to the insurer meaning that the insurance company is liable to pay the policyholder if a claim event happens. But it doesn't mean that every contract will be a liability to the insurance company; there are cases where the contract is presented as an asset (as in the previous balance sheet examples).
-\end{frame}
-
-\begin{frame}{What's inside the Insurance Contract Liability (ICL)?}
-  \vspace{0.2em}
-  \begin{center}
-\begin{tikzpicture}[
-  font=\small,
-  main/.style={draw, rounded corners, fill=blue!10, inner sep=8pt, align=center, minimum width=40mm},
-  mid/.style={draw, rounded corners, fill=green!15, inner sep=8pt, align=center, minimum width=35mm},
-  leaf/.style={draw, rounded corners, fill=black!8, inner sep=6pt, align=center, minimum width=20mm},
-  bar/.style={line width=1.2pt},
-  arr/.style={-{Stealth[length=2mm]}, line width=1.2pt}
-]
-  % Top level
-  \node[main] (icl) {\textbf{ICL}};
-  
-  % Two main components - positioned manually for exact control
-  \node[mid, below left=15mm and 3mm of icl] (lfrc) {\textbf{LfRC}};
-  \node[mid, below right=15mm and 3mm of icl] (lfic) {\textbf{LfIC}};
-  
-  % Split from ICL
-  \coordinate (split1) at ($(icl.south)+(0,-7.5mm)$);
-  \draw[bar] (icl.south) -- (split1);
-  \draw[bar] (split1 -| lfrc) -- (split1 -| lfic);
-  \draw[arr] (split1 -| lfrc) -- (lfrc.north);
-  \draw[arr] (split1 -| lfic) -- (lfic.north);
-  
-  % LfRC breakdown: BEL, RA, CSM (3 equal boxes)
-  \node[leaf, below=12mm of lfrc, xshift=-22mm] (lfrc-bel) {\textbf{BEL}};
-  \node[leaf, below=12mm of lfrc] (lfrc-ra) {\textbf{RA}};
-  \node[leaf, below=12mm of lfrc, xshift=22mm] (lfrc-csm) {\textbf{CSM}};
-  
-  \coordinate (split2) at ($(lfrc.south)+(0,-6mm)$);
-  \draw[bar] (lfrc.south) -- (split2);
-  \draw[bar] (split2 -| lfrc-bel) -- (split2 -| lfrc-csm);
-  \draw[arr] (split2 -| lfrc-bel) -- (lfrc-bel.north);
-  \draw[arr] (split2 -| lfrc-ra) -- (lfrc-ra.north);
-  \draw[arr] (split2 -| lfrc-csm) -- (lfrc-csm.north);
-  
-  % LfIC breakdown: only BEL
-  \node[leaf, below=12mm of lfic, xshift=-12mm] (lfic-bel) {\textbf{BEL}};
-  \node[leaf, below=12mm of lfic, xshift=12mm] (lfic-ra) {\textbf{RA}}; 
-  
-  \coordinate (split3) at ($(lfic.south)+(0,-6mm)$);
-  \draw[bar] (lfic.south) -- (split3);
-  \draw[bar] (split3 -| lfic-bel) -- (split3 -| lfic-ra);
-  \draw[arr] (split3 -| lfic-bel) -- (lfic-bel.north);
-  \draw[arr] (split3 -| lfic-ra) -- (lfic-ra.north);
-\end{tikzpicture}
-  \end{center}
-\end{frame}
-
-\begin{frame}[allowframebreaks]{Some Quick Definitions}
-Liability for Remaining Coverage (LfRC): is an entity’s obligation to:
-\begin{enumerate}
-  \item investigate and pay valid claims under existing insurance contracts for insured events that \textbf{have not yet occurred} (i.e., the obligation that relates to the unexpired portion of the insurance coverage); and
-  \item pay amounts under existing insurance contracts that are not included in (1) and that relate to:
-  \begin{enumerate}
-    \item insurance contract services not yet provided (i.e., the obligations that relate to future provision of insurance contract services); or 
-    \item any investment components or other amounts that are not related to the provision of insurance contract services and that have not been transferred to the Liability for Incurred Claims (LfIC)
-  \end{enumerate}
-\end{enumerate}
-\framebreak
-Liability for Incurred Claims (LfIC): is an entity’s obligation to:
-\begin{enumerate}
-  \item investigate and pay valid claims for insured events that have \textbf{already occurred}, including events that have occurred but for which claims have not been reported, and other incurred insurance expenses; and 
-  \item pay amounts that are not included in (1) and that relate to:\begin{enumerate}
-  \item insurance contract services that have already been provided; or
-  \item any investment components or other amounts that are not related to the provision of insurance contract services and that are not in the Liability for Remaining Coverage (LfRC).
-  \end{enumerate}
-  \vspace{0.2em}
-  \footnotesize
-  \textit{Source: IFRS~17, Appendix A (Definitions).}
-
-  \vspace{0.4em}
-\end{enumerate}
-\end{frame}
-
-
 \begin{frame}{Level of Aggregation (LoA)}
-Before we move to the building blocks, and measurement model, IFRS17 requires to aggregate (group) insurance contracts into portfolios. IFRS~17 is clear on how contracts should be grouped. There are three criteria:
+In order to calculate the LfRC and LfIC, IFRS17 requires to aggregate (group) insurance contracts into portfolios. IFRS~17 is clear on how contracts should be grouped. There are three criteria:
 \begin{itemize}
   \item Similar risk: product type or characteristics (e.g., premium payment mode),
   \item Profitability: expected profitability of the product,
@@ -482,7 +509,7 @@ reporting
 \textit{Source: IFRS~17, Para. 19} \\
 \normalsize
 \end{frame}
-\section{Re-read this section and edit if needed}
+
 \begin{frame}{What to Measure}
 On initial recognition, an entity shall measure a group of insurance contracts at the total of: 
 \begin{itemize}
@@ -501,7 +528,7 @@ We can re-write FCF in a more familiar term to be:
 \begin{equation}
   \text{FCF} := E\left[\text{PVCF}\right] + \text{RA} = \text{BEL} + \text{RA}
 \end{equation}
-where BEL stands for Best Estimate Liability. However we are going to discuss on, which future cash flow should be included in BEL calculation, how to choose the discount rate and how to calculate RA.
+where BEL stands for \textbf{Best Estimate Liability}. However we are going to discuss on, which future cash flow should be included in BEL calculation, how to choose the \textbf{discount rate} and how to calculate \textbf{RA}.
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Cashflow in Scope Boundary}
@@ -527,7 +554,8 @@ examples of such cash flows:
 \textit{Source: IFRS~17, Para. B65} \\
 \normalsize
 \end{frame}
-\begin{frame}[allowframebreaks]{Discount Rate}
+
+\begin{frame}{Discount Rate}
 The discount rates applied to the estimates of the future cash flows described previously shall: 
 \begin{enumerate}
 \item reflect the time value of money, the characteristics of the cash flows and the \textbf{liquidity characteristics} of the insurance contracts;
@@ -537,64 +565,91 @@ The discount rates applied to the estimates of the future cash flows described p
 \footnotesize
 \textit{Source: IFRS~17, Para. 36} \\
 \normalsize
-What interesting in the paragraph above is that we may use a lower or higher discount rate based on the liquidity characteristcs of the insurance contracts which means there is an additional assessment on how to determine how liquid is an insurance contract and the corresponding \textit{buffer} one should add or substract from the current discount rate. But how to calculate this?
 \end{frame}
 \begin{frame}[allowframebreaks]{Spot Rate and Forward Rate}
-We define spot rate $s_t$ to be the annual effective interest rate earned by money invested \textbf{now} (time 0) for a period of $t$ years. (Spot rates are sometimes called zero-coupon rates.) While (implied) forward rates $f_t$ is the annual effective interest rate earned by money invested \textbf{$t_1$} (time 0) for a period of $t_2$ years.
-
+We define spot rate $s_t$ to be the annual effective interest rate earned by money invested \textbf{now} (time 0) for a period of $t$ years. (Spot rates are sometimes called zero-coupon rates.) While (implied) forward rates $f_t$ is the annual effective interest rate earned by money invested \textbf{$t_1$} for a period of $t_2$ years.
+Mathematically we can formulate this to:
+\begin{equation}
+1+f_{\left[t_1, t_2\right]} = \frac{\left(1+s_{t_2}\right)^{t_2}}{\left(1+s_{t_1}\right)^{t_1}}
+\end{equation}
+Simple illustration on the calculation
 \begin{center}
 \begin{tikzpicture}[
-  node distance = 0pt,
-  box/.style    = {draw, rounded corners=4pt, minimum width=2cm,
-                   minimum height=0.9cm, font=\small, inner sep=6pt},
-  arr/.style    = {->, >=stealth, thick},
+    >=Stealth,
+    thick,
+    font=\small
 ]
 
-%% Timeline
-\draw[gray!60, line width=1pt] (0,0) -- (11,0);
-\foreach \x/\lbl in {0/0, 4.5/$t_2$, 10/$t_1$}{
-  \draw[gray!60] (\x,-0.15) -- (\x,0.15);
-  \node[below, font=\small] at (\x,-0.18) {\lbl};
+% Timeline (horizontal line)
+\draw[blue!70, line width=1.5pt] (-0.5, 0) -- (9.5, 0);
+
+% Tick marks and labels
+\foreach \x/\label in {0/0, 4.5/1, 9/2} {
+    \draw[blue!70, dashed] (\x, -1.5) -- (\x, 1.5);
+    \node[below] at (\x, -1.5) {\label};
 }
 
-%% Path A – direct to t1
-\node[box, fill=spotblue!15, draw=spotblue, text=spotblue!80!black]
-  (A0) at (0, 1.5) {\$1};
-\node[box, fill=spotblue!15, draw=spotblue, text=spotblue!80!black]
-  (A1) at (10,1.5) {$(1+s_{t_1})^{t_1}$};
-\draw[arr, spotblue, line width=1.8pt] (A0) -- (A1)
-  node[midway, above, font=\scriptsize, spotblue]
-    {invest at spot $s_{t_1}$ for $t_1$ years};
+% $1 label on left (top path)
+\node[left] at (-0.2, 0.3) {\$1};
 
-%% Path B – to t2 then roll forward
-\node[box, fill=fwdorange!15, draw=fwdorange, text=fwdorange!80!black]
-  (B0) at (0,-1.5) {\$1};
-\node[box, fill=fwdorange!15, draw=fwdorange, text=fwdorange!80!black]
-  (B1) at (4.5,-1.5) {$(1+s_{t_2})^{t_2}$};
-\node[box, align = center, fill=fwdorange!15, draw=fwdorange, text=fwdorange!80!black]
-  (B2) at (10,-1.5) {$(1+s_{t_2})^{t_2}$\\$\times(1+f_{t_2,t_1})^{t_1-t_2}$};
-\draw[arr, fwdorange, line width=1.8pt] (B0) -- (B1)
-  node[midway, below, font=\scriptsize, fwdorange]
-    {spot $s_{t_2}$};
-\draw[arr, fwdorange, line width=1.8pt] (B1) -- (B2)
-  node[midway, below, font=\scriptsize, fwdorange]
-    {fwd $f_{t_2,t_1}$};
+% $1 label on left (bottom path, same node)
+% We'll place text above and below the timeline
 
-%% Equality brace
-\draw[impliedpurple, very thick, <->] (10, 0.9) -- (10,-0.9);
-\node[impliedpurple, right, font=\footnotesize] at (10.1,0)
-  {\textbf{No-arb} $\Rightarrow$ equal};
+% --- Top path: two arcs ---
 
-%% Label paths
-\node[spotblue, font=\small\bfseries, left] at (-0.1, 1.5)
-  {Path A};
-\node[fwdorange, font=\small\bfseries, left] at (-0.1,-1.5)
-  {Path B};
+% Arc 1: 0 to 1 (1-year spot rate = 5%)
+\draw[blue!60, line width=2pt, ->]
+    (0, 0.2) to[out=60, in=120] (4.5, 0.2);
 
+% Arc 2: 1 to 2 (forward rate = F)
+\draw[blue!60, line width=2pt, ->]
+    (4.5, 0.2) to[out=60, in=120] (9, 0.2);
+
+% Labels inside arcs
+\node[above] at (2.25, 1.6) {1-year};
+\node[above] at (2.25, 0.75) {spot rate =};
+\node[above, red] at (2.25, 0.35) {\textbf{5\%}};
+
+\node[above] at (6.75, 1.6) {1-year};
+\node[above] at (6.75, 0.75) {forward rate};
+\node[above] at (6.75, 0.35) {= ``F''};
+
+% --- Bottom path: single arrow 0 to 2 ---
+\draw[red!80, line width=2pt, ->]
+    (0, -0.2) -- (9, -0.2);
+
+% 2-year spot rate label
+\node[below] at (4.5, -0.3) {2-year spot rate = \textcolor{violet}{\textbf{6\%}}};
 \end{tikzpicture}
 \end{center}
-
+\framebreak
 In Indonesia, the yield rate data is published by \href{https://www.phei.co.id/Data/HPW-dan-Imbal-Hasil}{Indonesia Bond Pricing Agency (IBPA)}. Due note that the rate in this website is \textbf{not} a zero-coupon rates, therefore we need to calculate the spot rate by ourselves using bootstraping method.
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{PHEI.png}
+
+    \column{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{PHEI Bond.png}
+  \end{columns}
+\end{frame}
+\begin{frame}{Bottom Up and Top Down}
+IFRS 17 proposes two basic methods for determining discount rates for cash flows of insurance contracts that do not vary based on the returns on underlying items, i.e., bottom-up approach and top-down approach.
+
+\end{frame}
+\begin{frame}{Bottom-Up Approach}
+Bottom-up approach: approach determines discount rates by adjusting a \textbf{liquid risk free} yield curve to reflect the differences between the liquidity characteristics of the financial instruments that underlie the rates observed in the market and the liquidity characteristics of the insurance contracts
+\footnotesize
+\textit{Source: IFRS~17, Para. B80} \\
+\normalsize
+\end{frame}
+
+\begin{frame}{Top-down Approach}
+Top-down approach: determines the appropriate discount rates for insurance contracts based on a yield curve that reflects the \textbf{current market} rates of return implicit in a fair value measurement of a reference portfolio of assets. An entity should adjust that yield curve to eliminate any factors that are not relevant to the insurance contracts, but is not required to adjust the yield curve for differences in liquidity characteristics of the insurance contracts and the reference portfolio  
+\footnotesize
+\textit{Source: IFRS~17, Para. B81} \\
+\normalsize
 \end{frame}
 
 \begin{frame}{Risk Adjustment}
@@ -637,29 +692,6 @@ PAA — Short-term
 \begin{frame}{Bit of Bonus on Transition Method}
 This is actually a set up to ending remarks. 
 FVA, FRA, MRA
-\end{frame}
-
-\begin{frame}{What happened to the premium so far}
-Based on the explanation so far, the premium paid to the insurer will directly become a LfRC then what happened ?
-  \begin{center}
-  \begin{tikzpicture}[
-    node distance=0mm and 4.5mm,
-    box/.style={draw, rounded corners, align=center, fill=blue!4, inner sep=2.2pt, font=\scriptsize, text width=0.20\linewidth, minimum height=8mm},
-    arr/.style={-{Stealth[length=2.0mm]}, thick}
-  ]
-    \node[box] (prem) {\textbf{1. Premiums}};
-    \node[box, right=of prem] (lfrc) {\textbf{2. LfRC}};
-    \node[box, below=5mm of lfrc] (lfic) {\textbf{3. LfIC}};
-    \node[box, right=50mm of prem] (end) {\textbf{4. End}};
-
-    \draw[arr] (prem) -- (lfrc);
-    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (lfrc.south) -- (lfic.north);
-    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (lfrc.east) -- (end.west);
-    \draw[dashed, thick, red, -{Stealth[length=2.0mm]}] (lfic.east) -- (end.west);
-
-  \end{tikzpicture}
-  \end{center}
-But can LfIC be calculated at initial recognition? 
 \end{frame}
 
 \section{Remeasurement}
