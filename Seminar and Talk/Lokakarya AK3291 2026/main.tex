@@ -27,16 +27,71 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{xcolor}
-
+\setbeamertemplate{navigation symbols}{}
 % Custom colors
 \definecolor{spotblue}{RGB}{30,120,200}
 \definecolor{fwdorange}{RGB}{220,100,30}
 \definecolor{impliedpurple}{RGB}{120,60,180}
 \definecolor{shadeblue}{RGB}{220,235,255}
-
+\definecolor{madridPrimary}{RGB}{47,  82, 143}
+% Secondary (palette secondary)          medium blue
+\definecolor{madridSecondary}{RGB}{71, 107, 176}
+% Tertiary  (palette tertiary)           lighter blue
+\definecolor{madridTertiary}{RGB}{140, 165, 210}
+% Quaternary / background tint           very light blue
+\definecolor{madridLight}{RGB}{210, 220, 240}
+% Alert / accent                         warm crimson-red
+\definecolor{madridAlert}{RGB}{188,  30,  30}
+% Light alert tint
+\definecolor{madridAlertLight}{RGB}{230, 170, 170}
+% Neutral (risk adjustment)              warm gray
+\definecolor{madridGray}{RGB}{175, 175, 185}
+% Header / title text color              same as primary
+\definecolor{titlegray}{RGB}{47, 82, 143}
+\definecolor{wBlue}{RGB}{0,51,102}
+\definecolor{wMidBlue}{RGB}{51,102,153}
+\definecolor{wLightBlue}{RGB}{173,204,230}
+\definecolor{wDarkGray}{RGB}{55,55,55}
+\definecolor{wMidGray}{RGB}{130,130,130}
+\definecolor{wLightGray}{RGB}{225,225,225}
+\definecolor{wAccent}{RGB}{204,102,0}
+\definecolor{darkpanel}{RGB}{85,88,94}
+\definecolor{midgray}{RGB}{110,113,120}
+\definecolor{boxfill}{RGB}{208,210,213}
+\definecolor{bordergray}{RGB}{148,150,153}
+\tikzset{
+	leftbox/.style={rectangle, rounded corners=3pt,
+		draw=bordergray, fill=boxfill,
+		text width=1.6cm, align=center, font=\fontsize{5.5}{7}\selectfont,
+		inner sep=4pt, minimum height=1.4cm},
+	csmbox/.style={rectangle, rounded corners=14pt,
+		draw=white, fill=white,
+		text width=2.4cm, align=center, font=\fontsize{5.5}{7}\selectfont,
+		inner sep=6pt, minimum height=0.9cm},
+	bannerbox/.style={rectangle, rounded corners=3pt,
+		draw=none, fill=midgray,
+		text width=2.4cm, align=left, font=\fontsize{5.5}{7}\selectfont\color{white},
+		inner sep=5pt, minimum height=0.52cm},
+	subbox/.style={rectangle, rounded corners=2pt,
+		draw=none, fill=boxfill,
+		text width=2.25cm, align=left, font=\fontsize{5}{6.5}\selectfont,
+		inner sep=4pt, minimum height=0.6cm},
+	midbox/.style={rectangle, rounded corners=3pt,
+		draw=bordergray, fill=boxfill,
+		text width=2.1cm, align=center, font=\fontsize{5.5}{7}\selectfont,
+		inner sep=4pt, minimum height=0.9cm},
+	plbox/.style={rectangle, rounded corners=3pt,
+		draw=bordergray, fill=boxfill,
+		text width=1.65cm, align=center, font=\fontsize{5.5}{7}\selectfont,
+		inner sep=5pt, minimum height=1.4cm},
+	myarr/.style={-{Stealth[length=3pt,width=2.5pt]}, line width=0.6pt, darkpanel},
+	mydarr/.style={-{Stealth[length=3pt,width=2.5pt]}, line width=0.6pt, darkpanel, dashed},
+	myline/.style={line width=0.6pt, darkpanel},
+	mydline/.style={line width=0.6pt, darkpanel, dashed},
+}
 \usepackage[normalem]{ulem}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,fit,calc,decorations.pathreplacing,bending}
+\usetikzlibrary{arrows.meta,positioning,fit,calc,decorations.pathreplacing,bending,backgrounds}
 \usepackage[most]{tcolorbox}
 \tcbset{colback=gray!6,colframe=black!35,boxrule=0.6pt,arc=2pt}
 \hypersetup{hidelinks}
@@ -66,15 +121,7 @@
 \end{frame}
 
 \begin{frame}{Agenda}
-  \begin{enumerate}
-    \item Prolog: What is Actuarial Audit ?
-    \item Actuarial Science and Accounting
-    \item Overview of IFRS~17
-    \item Scope of IFRS~17
-    \item Recognition and Measurement under IFRS~17
-    \item Remeasurement
-    \item Financial Disclosure
-  \end{enumerate}
+	\tableofcontents
 \end{frame}
 
 \begin{frame}[allowframebreaks]{My Personal Goal from Today's Session}
@@ -269,7 +316,6 @@ In (re)insurance one of the International Financial Reporting Standards (IFRS) w
 Doing the actuarial audit, means that we need to check the \textbf{documentation, assumptions used} and whether it align with the \textbf{standards}.\\
 It is said that doing IFRS17 would required at least 3 parties, i.e., accounting, actuarial, and IT. We are going to see in this session why this will be the case.
 \end{frame}
-
 
 \section{Overview of IFRS~17}
 \begin{frame}{Where's My Money?}
@@ -468,7 +514,7 @@ From this section, now you know how to answer this question from a very famous \
 \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{Patrick Mayonnaise.png}
 \end{center}
 \end{frame}
-
+\subsection{Level of Aggregation}
 \begin{frame}{Level of Aggregation (LoA)}
 In order to calculate the LfRC and LfIC, IFRS17 requires to aggregate (group) insurance contracts into portfolios. IFRS~17 is clear on how contracts should be grouped. There are three criteria:
 \begin{itemize}
@@ -554,7 +600,7 @@ examples of such cash flows:
 \textit{Source: IFRS~17, Para. B65} \\
 \normalsize
 \end{frame}
-
+\subsection{Discount Rate}
 \begin{frame}{Discount Rate}
 The discount rates applied to the estimates of the future cash flows described previously shall: 
 \begin{enumerate}
@@ -673,7 +719,10 @@ We usually verify whether the rates determination and used is already correct an
 \end{frame}
 \begin{frame}{Bottom-Up Approach}
 Bottom-up approach: determines discount rates by adjusting a \textbf{liquid risk free} yield curve to reflect the differences between the liquidity characteristics of the \textbf{financial instruments that underlie the rates observed} in the market and the liquidity characteristics of the insurance contracts\\
-c
+\footnotesize
+\textit{Source: IFRS~17, Appendix B80}\\
+\vspace{0.4em}
+\normalsize
 \end{frame}
 
 \begin{frame}{Top-down Approach}
@@ -682,22 +731,32 @@ Top-down approach: determines the appropriate discount rates for insurance contr
 \textit{Source: IFRS~17, Para. B81} \\
 \normalsize
 \end{frame}
-
+\subsection{Risk Adjustment}
 \begin{frame}[allowframebreaks]{Risk Adjustment}
 Risk Adjusment for non-financial risk (RA) is the compensation an entity requires for bearing the uncertainty about the amount and timing of the cash flows that arises from non-financial risk as the entity fulfils insurance contracts.
   \vspace{0.2em}
   \footnotesize
-  \textit{Source: IFRS~17, Appendix A (Definitions).}
+  \textit{Source: IFRS~17, Appendix A (Definitions).}\\
   \vspace{0.4em}
+  \normalsize
 The risk adjustment for non-financial risk for insurance contracts measures the compensation that the entity would require to make the entity indifferent between:
 \begin{enumerate}
 \item fulfilling a liability that has a \textbf{range of possible outcomes} arising from non-financial risk; and
 \item fulfilling a liability that will \textbf{generate fixed cash flows} with the same expected present value as the insurance contracts.
+\end{enumerate}  \vspace{0.2em}
+\footnotesize
+\textit{Source: IFRS~17, Appendix B87}\\
+\vspace{0.4em}
+\normalsize
 Because the risk adjustment for non-financial risk reflects the compensation the entity would require for bearing the non-financial risk arising from the uncertain amount and timing of the cash flows, the risk adjustment for non-financial risk also reflects:
 \begin{enumerate}
 \item the degree of \textbf{diversification benefit} the entity includes when determining the compensation it requires for bearing that risk; and
 \item both favourable and unfavourable outcomes, in a way that reflects the entity’s \textbf{degree of risk aversion}.
 \end{enumerate}
+\footnotesize
+\textit{Source: IFRS~17, Appendix B88}\\
+\vspace{0.4em}
+\normalsize
 IFRS 17 does not specify the estimation technique(s) used to determine the RA. However, to reflect the compensation the entity would require for bearing the non-financial risk, the RA shall have the following characteristics:
 \begin{enumerate} 
 \item risks with low frequency and high severity will result in higher risk adjustments for non-financial risk than risks with high frequency and low severity;
@@ -706,10 +765,14 @@ IFRS 17 does not specify the estimation technique(s) used to determine the RA. H
 \item the \textbf{less that is known} about the current estimate and its trend, \textbf{the higher will be the RA}; and
 \item to the extent that \textbf{emerging experience reduces uncertainty} about the amount and timing of cash flows, \textbf{RA will decrease} and vice versa.
 \end{enumerate}
+\footnotesize
+\textit{Source: IFRS~17, Appendix B91}\\
+\vspace{0.4em}
+\normalsize
 Most common techniques used in calculating RA is confidence level, Value at Risk (VaR), and Cost of Capital (CoC).
 \end{frame} 
-
-\begin{frame}[allowframebreaks]{Contractual Service Margin (CSM)}
+\subsection{Contractual Service Margin (CSM)}
+\begin{frame}[allowframebreaks]{Contractual Service Margin (CSM) and Loss Component (LC)}
 This is the bread and butter, the totally new concept introduced in the IFRS17. Contractual Service Margin (CSM) is a component of the carrying amount of the asset or liability for a \textbf{group of insurance contracts} representing the \textbf{unearned profit} the entity will recognise as it provides \textbf{insurance contract services} under the insurance contracts in the group. \\
   \vspace{0.2em}
   \footnotesize
@@ -720,15 +783,87 @@ At initial recognition, if the group of contract is not onerous, CSM is calculat
 \begin{equation}
 \text{CSM} := \text{PVCF}_{\text{inflow}} - \text{PVCF}_{\text{outflow}} - \text{RA}
 \end{equation}
-or visually \textbf{insert claude generated graph}. \\
-We will revisit this later in the remeasurement section.
+If we look closely, this formula looks like the FCF calculation that we saw earlier. This is definitely intentional where it implicate that there is no profit to be recognized at inception. \\
+We also saw in earlier section, we learned that even at initial recognition there might be insurance contract where it is not profitable. This only happened if the CSM is negative and it will be called as Loss Component (LC).
+We will revisit this in detail later in the remeasurement section.
+\begin{center}
+\pagestyle{empty}
+
+\begin{tikzpicture}[
+	scale=0.7,
+	every node/.style={font=\small\sffamily},
+	label/.style={font=\footnotesize\sffamily, align=center},
+	]
+	
+	%% Title inside tikz
+	\node[align=center, font=\large\bfseries\sffamily] at (7.1, 9.8)
+	{CSM and LC at Inception};
+	
+	%% ============================================================
+	%% LEFT SIDE: Profitable group — CSM at Inception
+	%% Structure: Fulfilment Cash Flows (FCF) = outflows - inflows + RA
+	%%            CSM = -FCF (deferred profit)
+	%%            Left bar  = Premium received (cash inflow)
+	%%            Right stack (bottom→top) = FCF components + CSM on top
+	%% ============================================================
+	
+	% Left bar: Expected cash inflow (premium / consideration received)
+	\fill[madridPrimary] (0, 0) rectangle (2.5, 8.5);
+	\node[align=center, text=white, font=\footnotesize\bfseries\sffamily]
+	at (1.25, 4.25) {Expected\\cash inflow};
+	
+	% Right stack — bottom: Expected cash outflow (claims, expenses)
+	\fill[madridLight] (2.7, 0) rectangle (5.2, 4.0);
+	\node[align=center, text=madridPrimary, font=\footnotesize\sffamily]
+	at (3.95, 2.0) {Expected\\cash outflow};
+	
+	% Right stack — middle: Risk adjustment
+	\fill[madridGray] (2.7, 4.1) rectangle (5.2, 5.8);
+	\node[align=center, font=\footnotesize\sffamily]
+	at (3.95, 4.95) {Risk\\Adjustment};
+	
+	% Right stack — top: CSM (deferred profit, inflow > FCF)
+	\fill[madridAlert] (2.7, 5.9) rectangle (5.2, 8.5);
+	\node[align=center, text=white, font=\footnotesize\bfseries\sffamily]
+	at (3.95, 7.2) {CSM};
+	
+	%% ============================================================
+	%% RIGHT SIDE: Onerous group — Loss Component at Inception
+	%% Structure: FCF > 0  →  no CSM; day-1 loss recognised immediately
+	%%            Left bar  = Expected cash inflow (premium received)
+	%%            Right stack (bottom→top) = cash outflow + RA + LC
+	%%            LC sits on top because outflows exceed inflows
+	%% ============================================================
+
+	% Left bar: Expected cash inflow (smaller — contract is onerous)
+	\fill[madridPrimary] (7.0, 0) rectangle (9.5, 5.5);
+	\node[align=center, text=white, font=\footnotesize\bfseries\sffamily]
+	at (8.25, 2.75) {Expected\\cash inflow};
+	
+	% Right stack — bottom: Expected cash outflow (larger than inflow)
+	\fill[madridLight] (9.7, 0) rectangle (12.2, 4.0);
+	\node[align=center, text=madridPrimary, font=\footnotesize\sffamily]
+	at (10.95, 2.0) {Expected\\cash outflow};
+	
+	% Right stack — middle: Risk adjustment
+	\fill[madridGray] (9.7, 4.1) rectangle (12.2, 8.5);
+	\node[align=center, font=\footnotesize\sffamily]
+	at (10.95, 5.95) {Risk\\Adjustment};
+	
+	% Right stack — top: Loss Component (FCF > premium → day-1 loss)
+	% Extends above the left bar height to show the excess
+	\fill[madridAlert] (7.0, 5.6) rectangle (9.5, 8.5);
+	\node[align=center, text=white, font=\footnotesize\bfseries\sffamily]
+	at (8.25, 7.2) {Loss\\Component};
+	
+	%% ============================================================
+	%% Divider between left and right
+	%% ============================================================
+	\draw[dashed, gray, thick] (6.3, -0.3) -- (6.3, 9.2);
+	
+\end{tikzpicture}
+\end{center}
 \end{frame}
-
-\begin{frame}{Loss Component}
-We have introduced that there will be a case where an insurance contract can be onerous. This might be due to several reasons:
-\end{frame}
-
-
 
 \begin{frame}{Quick Break 2.0}
 In insurance business, we will be friend with these 3 items
@@ -736,7 +871,7 @@ In insurance business, we will be friend with these 3 items
     \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{bel ra csm.png}
   \end{center}
 \end{frame}
-
+\subsection{Measurement Model}
 \begin{frame}{Measurement Model}
 Explain that there are different models for different types of insurance (GMM, PAA, and VFA).
 Use of GMM or PAA is optional, but VFA is mandatory if the insurance contract passes the eligibility criteria.
@@ -753,15 +888,16 @@ Use of GMM or PAA is optional, but VFA is mandatory if the insurance contract pa
 \begin{frame}{PAA}
 PAA — Short-term
 \end{frame}
-
-\begin{frame}{Bit of Bonus on Transition Method}
+\subsection{Transition Approach}
+\begin{frame}{Bit of Bonus on Transition Approach}
 This is actually a set up to ending remarks. 
 FVA, FRA, MRA
 \end{frame}
 
 \section{Remeasurement}
-\begin{frame}{LfIC}
-  What is LfIC and how to calculate
+\subsection{Liability for Incurred Claim (LfIC)}
+\begin{frame}{Liability for Incurred Claim (LfIC)}
+  It is clear that there should not be a Liability for Incurred Claim (LfIC) at initial recognition since it implies that there is a claim directly after issuing the contract. LfIC only recorded after initial recognition or remeasurement. 
 \end{frame}
 
 \begin{frame}{IBNR}
@@ -798,8 +934,6 @@ FVA, FRA, MRA
   Include reference to exam 5 material.
 \end{frame}
 
-\section{Generated by Prism.ai not updated yet}
-
 \section{Financial Disclosure and Statement Mapping}
 
 \begin{frame}{Where does it show up in the financial statements?}
@@ -812,6 +946,99 @@ FVA, FRA, MRA
       \end{itemize}
     \item \textbf{Disclosures:} reconciliations/roll-forwards tying opening to closing balances.
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Graph from EY IFRS17 Playbook}
+\centering
+\begin{tikzpicture}[scale = 0.9, x=1cm, y=1cm]
+	
+	% ============ NODE PLACEMENT ============
+	
+	% Left input box (center at x=-5.2, y=0.3)
+	\node[leftbox] (change) at (-5.2, 0.3)
+	{Change in estimates relating to future services};
+	
+	% Panel nodes (center at x=0)
+	\node[csmbox]    (csm)      at (0,  2.05)  {Contractual service margin};
+	\node[bannerbox] (banner)   at (0,  0.9)   {Fulfilment cash flows};
+	\node[subbox]    (futurecf) at (0,  0.28)  {Future cash flows (CFs)};
+	\node[subbox]    (ra)       at (0, -0.48)  {Risk adjustment (RA) for non-financial risk};
+	\node[subbox]    (disc)     at (0, -1.2)   {Discounting};
+	
+	% Dark panel background
+	\begin{scope}[on background layer]
+		\node[rectangle, rounded corners=8pt, fill=darkpanel,
+		fit=(csm)(banner)(futurecf)(ra)(disc),
+		inner xsep=12pt, inner ysep=13pt] (panel) {};
+	\end{scope}
+	
+	% Middle output column (center at x=4.0)
+	\node[midbox] (relcsm)   at (4.0,  2.05)  {Release of CSM};
+	\node[midbox] (changecf) at (4.0,  0.72)  {Change in CFs related to past and current services};
+	\node[midbox] (relra)    at (4.0, -0.35)  {Release of RA related to past and current services};
+	\node[midbox] (insexp)   at (4.0, -1.5)   {Insurance finance expense at locked in discount rate};
+	\node[midbox] (effdisc)  at (4.0, -2.55)  {Effect of changes in discount rates};
+	
+	% Right P&L column (center at x=7.0)
+	\node[plbox] (plins)    at (7.0,  0.88)  {\textbf{P\&L:} Insurance service result};
+	\node[plbox] (plfinexp) at (7.0, -1.5)   {\textbf{P\&L:} Insurance finance expense};
+	\node[plbox] (oci)      at (7.0, -2.55)  {Other comprehensive income};
+	
+	% "Onerous contacts" label
+	\node[font=\fontsize{5.5}{7}\selectfont] (onerous) at (4.8, 3.3) {Onerous contacts};
+	
+	% ============ ARROWS ============
+	
+	% change.east splits into two branches
+	% Upper: to CSM level
+	\draw[myline] (change.east) -- ++( 0.4, 0) coordinate (split);
+	\draw[myarr]  (split) |- (panel.west |- csm);
+	% Lower: to futurecf level
+	\draw[myarr]  (split) |- (panel.west |- futurecf);
+	
+	% Panel right edge to middle column
+	\draw[myarr] (panel.east |- csm)      -- (relcsm.west);
+	\draw[myarr] (panel.east |- futurecf) -- (changecf.west);
+	\draw[myarr] (panel.east |- ra)       -- (relra.west);
+	
+	% Discounting splits to insexp and effdisc
+	\draw[myline] (panel.east |- disc) -- ++(0.5, 0) coordinate (discsplit);
+	\draw[myarr]  (discsplit) |- (insexp.west);
+	\draw[myarr]  (discsplit) |- (effdisc.west);
+	
+	% Middle three boxes -> P&L Insurance service result
+	% Vertical collector at x = 5.8 (between midbox right edge ~5.13 and plins.west ~6.18)
+	\draw[myline] (relcsm.east)   -| (5.8,  2.05);
+	\draw[myline] (changecf.east) -| (5.8,  0.72);
+	\draw[myline] (relra.east)    -| (5.8, -0.35);
+	\draw[myline] (5.8,  2.05) -- (5.8, -0.35);
+	\draw[myarr]  (5.8,  0.88) -- (plins.west);
+	
+	% insexp -> plfinexp (solid)
+	\draw[myarr] (insexp.east) -- (plfinexp.west);
+	
+	% effdisc -> oci (dashed)
+	\draw[mydarr] (effdisc.east) -- (oci.west);
+	
+	% ============ ONEROUS CONTACTS DASHED BOX ============
+	% Loop: up from above change box, across top, down to plins.north
+	% Corners: TL above change.north-west, TR above plins.north-east
+	% Top y = 3.1
+	
+	% Onerous contacts dashed loop
+	% Use plins.east x for TR, change.west x for TL
+	% Top row y = 3.1
+	\coordinate (TL) at (-5.95, 3.1);
+	\coordinate (TR) at (7.85,  3.1);
+	
+	% Left vertical: from just above change.north-west up to TL
+	\draw[mydline] (-5.95, 1.12) -- (TL);
+	% Top horizontal across
+	\draw[mydline] (TL) -- (TR);
+	% Right vertical: straight down to plins.north
+	\draw[mydarr]  (TR) -- (7.85, 2.28) -- (plins.north -| {(7.85,0)}) -- (plins.north);
+	
+\end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Remeasurement mapping (illustrative)}
@@ -828,7 +1055,7 @@ FVA, FRA, MRA
   \end{tabular}
 \end{frame}
 
-\begin{frame}{Suggested reading (primary sources)}
+\begin{frame}{References}
   \begin{thebibliography}{9}
   \bibitem{ifrs17}
   International Accounting Standards Board (IASB). \emph{IFRS 17 Insurance Contracts}. IFRS Foundation, issued 2017 (effective 1 January 2023).
