@@ -566,6 +566,27 @@ The discount rates applied to the estimates of the future cash flows described p
 \textit{Source: IFRS~17, Para. 36} \\
 \normalsize
 \end{frame}
+\begin{frame}[allowframebreaks]{Discount Rate should be simple, isn't it ?}
+Well yes, but according to IFRS~17, an entity shall use the a specific discount rate to measure or determine specific item. For example: 
+\begin{enumerate}
+  \item to measure the FCF: \textbf{current} discount rates
+  \item to determine the interest to accrete on the CSM for insurance contracts without direct participation features: discount rates determined at the \textbf{date of initial recognition} of a group of contracts.
+  \item to measure the changes to the CSM for insurance contracts without direct participation features of a group of insurance contracts for changes in FCF that relate to future, 
+\begin{enumerate}
+  \item experience experience adjustments arising from premiums received in the period that relate to future service, and related cash flows such as insurance acquisition cash flows and premium-based taxes
+  \item changes in estimates of the present value of the future cash flows in the LfRC except the effect of the time value of money and changes in the time value of money and the effect of financial risk and changes in financial risk
+  \item changes in the RA for non-financial risk that relate to future service
+\end{enumerate} shall use discount rates determined on \textbf{initial recognition}
+\item if an entity chooses to disaggregate Insurance Finance Income or Expenses (IFIE) between profit or loss and Other Comprehensive Income (OCI), to determine the amount of the IFIE included in profit or loss:
+\begin{enumerate}
+  \item for groups of insurance contracts for which changes in assumptions that relate to financial risk do not have a substantial effect on the amounts paid to policyholders, applying paragraph B131—discount rates determined at the date of initial recognition of a group of contracts, applying paragraph 36 to nominal cash flows that do not vary based on the returns on any underlying items;
+\item for groups of insurance contracts for which changes in assumptions that relate to financial risk have a substantial effect on the amounts paid to policyholders, applying paragraph B132(a)(i)—discount rates that allocate the remaining revised expected finance income or expenses over the remaining duration of the group of contracts at a constant rate; and
+\item for groups of contracts applying the premium allocation approach applying paragraphs 59(b) and B133—discount rates determined at the date of the incurred claim, applying paragraph 36 to nominal cash flows that do not vary based on the returns on any underlying items
+\end{enumerate}
+
+\end{enumerate}
+\end{frame} 
+
 \begin{frame}[allowframebreaks]{Spot Rate and Forward Rate}
 We define spot rate $s_t$ to be the annual effective interest rate earned by money invested \textbf{now} (time 0) for a period of $t$ years. (Spot rates are sometimes called zero-coupon rates.) While (implied) forward rates $f_t$ is the annual effective interest rate earned by money invested \textbf{$t_1$} for a period of $t_2$ years.
 Mathematically we can formulate this to:
@@ -635,18 +656,24 @@ In Indonesia, the yield rate data is published by \href{https://www.phei.co.id/D
   \end{columns}
 \end{frame}
 \begin{frame}{Bottom Up and Top Down}
-IFRS 17 proposes two basic methods for determining discount rates for cash flows of insurance contracts that do not vary based on the returns on underlying items, i.e., bottom-up approach and top-down approach.
-
+IFRS 17 proposes two basic methods for determining discount rates for cash flows of insurance contracts that do not vary based on the returns on underlying items, i.e., bottom-up approach and top-down approach.\\
+In practice the top-down approach and the bottom-up approach may result in different yield curves, even in the same currency \\
+\footnotesize
+\textit{Source: IFRS~17, Para. B84} \\
+\normalsize
+\begin{tcolorbox}[colback=green!5,colframe=green!40!black,title=Audit Checkbox]
+We usually verify whether the rates determination and used is already correct and consistent throughout document. 
+\end{tcolorbox}
 \end{frame}
 \begin{frame}{Bottom-Up Approach}
-Bottom-up approach: approach determines discount rates by adjusting a \textbf{liquid risk free} yield curve to reflect the differences between the liquidity characteristics of the financial instruments that underlie the rates observed in the market and the liquidity characteristics of the insurance contracts
+Bottom-up approach: determines discount rates by adjusting a \textbf{liquid risk free} yield curve to reflect the differences between the liquidity characteristics of the \textbf{financial instruments that underlie the rates observed} in the market and the liquidity characteristics of the insurance contracts\\
 \footnotesize
 \textit{Source: IFRS~17, Para. B80} \\
 \normalsize
 \end{frame}
 
 \begin{frame}{Top-down Approach}
-Top-down approach: determines the appropriate discount rates for insurance contracts based on a yield curve that reflects the \textbf{current market} rates of return implicit in a fair value measurement of a reference portfolio of assets. An entity should adjust that yield curve to eliminate any factors that are not relevant to the insurance contracts, but is not required to adjust the yield curve for differences in liquidity characteristics of the insurance contracts and the reference portfolio  
+Top-down approach: determines the appropriate discount rates for insurance contracts based on a yield curve that reflects the \textbf{current market} rates of return implicit in a fair value measurement of a \textbf{reference portfolio} of assets. An entity should adjust that yield curve to eliminate any factors that are not relevant to the insurance contracts, but is not required to adjust the yield curve for differences in liquidity characteristics of the insurance contracts and the reference portfolio.  \\
 \footnotesize
 \textit{Source: IFRS~17, Para. B81} \\
 \normalsize
