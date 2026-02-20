@@ -575,16 +575,22 @@ Well yes, but according to IFRS~17, an entity shall use the a specific discount 
 \begin{enumerate}
   \item experience experience adjustments arising from premiums received in the period that relate to future service, and related cash flows such as insurance acquisition cash flows and premium-based taxes
   \item changes in estimates of the present value of the future cash flows in the LfRC except the effect of the time value of money and changes in the time value of money and the effect of financial risk and changes in financial risk
-  \item changes in the RA for non-financial risk that relate to future service
+  \item changes in the RA for non-financial risk that relate to future servic
 \end{enumerate} shall use discount rates determined on \textbf{initial recognition}
+\item for groups of contracts applying the premium allocation approach that have a significant financing component, to adjust the carrying amount of the LfRC applying: discount rates determined on \textbf{initial recognition}
 \item if an entity chooses to disaggregate Insurance Finance Income or Expenses (IFIE) between profit or loss and Other Comprehensive Income (OCI), to determine the amount of the IFIE included in profit or loss:
 \begin{enumerate}
-  \item for groups of insurance contracts for which changes in assumptions that relate to financial risk do not have a substantial effect on the amounts paid to policyholders, applying paragraph B131—discount rates determined at the date of initial recognition of a group of contracts, applying paragraph 36 to nominal cash flows that do not vary based on the returns on any underlying items;
-\item for groups of insurance contracts for which changes in assumptions that relate to financial risk have a substantial effect on the amounts paid to policyholders, applying paragraph B132(a)(i)—discount rates that allocate the remaining revised expected finance income or expenses over the remaining duration of the group of contracts at a constant rate; and
-\item for groups of contracts applying the premium allocation approach applying paragraphs 59(b) and B133—discount rates determined at the date of the incurred claim, applying paragraph 36 to nominal cash flows that do not vary based on the returns on any underlying items
+  \item for groups of insurance contracts for which changes in assumptions that relate to financial risk \textbf{do not have a substantial effect} on the amounts paid to policyholders: discount rates determined at the \textbf{date of initial recognition} of a group of contracts, to nominal cash flows that do not vary based on the returns on any underlying items;
+\item for groups of insurance contracts for which changes in assumptions that relate to financial risk \textbf{have a substantial effect} on the amounts paid to policyholders, applying paragraph B132(a)(i)—discount rates that allocate the remaining revised expected finance income or expenses over the remaining duration of the group of contracts at a \textbf{constant rate}; and
+\item for groups of contracts applying the premium allocation approach: discount rates determined at the date of the \textbf{incurred claim}
 \end{enumerate}
-
 \end{enumerate}
+\footnotesize
+\textit{Source: IFRS~17, Para. B72} \\
+\normalsize
+So in fact, we will use different kind of discount for a different calculation. \\
+If you remember our previous slide, we learned that insurance contract can be grouped into one as long as the contracts issued no more than one year apart in the same group, so how do we determined the discount rate since there are several cases where the discount rate used is the discount rate determined at the date of initial recognition ? According to IFRS~17, para B73, an entity may use weighted-average discount rates over the period that contracts in the group are issued.\\
+It is also mentioned that some calculations are required to be calculated using discount rate which determined at the date of initial recognition, how to determine this discount rate?
 \end{frame} 
 
 \begin{frame}[allowframebreaks]{Spot Rate and Forward Rate}
@@ -667,9 +673,7 @@ We usually verify whether the rates determination and used is already correct an
 \end{frame}
 \begin{frame}{Bottom-Up Approach}
 Bottom-up approach: determines discount rates by adjusting a \textbf{liquid risk free} yield curve to reflect the differences between the liquidity characteristics of the \textbf{financial instruments that underlie the rates observed} in the market and the liquidity characteristics of the insurance contracts\\
-\footnotesize
-\textit{Source: IFRS~17, Para. B80} \\
-\normalsize
+c
 \end{frame}
 
 \begin{frame}{Top-down Approach}
@@ -679,18 +683,51 @@ Top-down approach: determines the appropriate discount rates for insurance contr
 \normalsize
 \end{frame}
 
-\begin{frame}{Risk Adjustment}
+\begin{frame}[allowframebreaks]{Risk Adjustment}
 Risk Adjusment for non-financial risk (RA) is the compensation an entity requires for bearing the uncertainty about the amount and timing of the cash flows that arises from non-financial risk as the entity fulfils insurance contracts.
   \vspace{0.2em}
   \footnotesize
   \textit{Source: IFRS~17, Appendix A (Definitions).}
-
   \vspace{0.4em}
+The risk adjustment for non-financial risk for insurance contracts measures the compensation that the entity would require to make the entity indifferent between:
+\begin{enumerate}
+\item fulfilling a liability that has a \textbf{range of possible outcomes} arising from non-financial risk; and
+\item fulfilling a liability that will \textbf{generate fixed cash flows} with the same expected present value as the insurance contracts.
+Because the risk adjustment for non-financial risk reflects the compensation the entity would require for bearing the non-financial risk arising from the uncertain amount and timing of the cash flows, the risk adjustment for non-financial risk also reflects:
+\begin{enumerate}
+\item the degree of \textbf{diversification benefit} the entity includes when determining the compensation it requires for bearing that risk; and
+\item both favourable and unfavourable outcomes, in a way that reflects the entity’s \textbf{degree of risk aversion}.
+\end{enumerate}
+IFRS 17 does not specify the estimation technique(s) used to determine the RA. However, to reflect the compensation the entity would require for bearing the non-financial risk, the RA shall have the following characteristics:
+\begin{enumerate} 
+\item risks with low frequency and high severity will result in higher risk adjustments for non-financial risk than risks with high frequency and low severity;
+\item for similar risks, contracts with a \textbf{longer duration} will result in \textbf{higher RA} than contracts with a shorter duration;
+\item risks with a \textbf{wider probability distribution} will result in \textbf{higher RA} than risks with a narrower distribution;
+\item the \textbf{less that is known} about the current estimate and its trend, \textbf{the higher will be the RA}; and
+\item to the extent that \textbf{emerging experience reduces uncertainty} about the amount and timing of cash flows, \textbf{RA will decrease} and vice versa.
+\end{enumerate}
+Most common techniques used in calculating RA is confidence level, Value at Risk (VaR), and Cost of Capital (CoC).
+\end{frame} 
+
+\begin{frame}[allowframebreaks]{Contractual Service Margin (CSM)}
+This is the bread and butter, the totally new concept introduced in the IFRS17. Contractual Service Margin (CSM) is a component of the carrying amount of the asset or liability for a \textbf{group of insurance contracts} representing the \textbf{unearned profit} the entity will recognise as it provides \textbf{insurance contract services} under the insurance contracts in the group. \\
+  \vspace{0.2em}
+  \footnotesize
+  \textit{Source: IFRS~17, Appendix A (Definitions)}
+  \vspace{0.4em}
+  \normalsize
+At initial recognition, if the group of contract is not onerous, CSM is calculated:
+\begin{equation}
+\text{CSM} := \text{PVCF}_{\text{inflow}} - \text{PVCF}_{\text{outflow}} - \text{RA}
+\end{equation}
+or visually \textbf{insert claude generated graph}. \\
 \end{frame}
 
-\begin{frame}{CSM and LC}
-  
+\begin{frame}{Loss Component}
+
 \end{frame}
+
+
 
 \begin{frame}{Quick Break 2.0}
 In insurance business, we will be friend with these 3 items
