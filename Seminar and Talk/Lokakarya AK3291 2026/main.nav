@@ -134,38 +134,36 @@
 \headcommand {\beamer@framepages {56}{56}}
 \headcommand {\slideentry {4}{5}{3}{57/57}{Measurement Model}{0}}
 \headcommand {\beamer@framepages {57}{57}}
-\headcommand {\slideentry {4}{5}{4}{58/58}{Measurement Model}{0}}
+\headcommand {\beamer@subsectionpages {55}{57}}
+\headcommand {\beamer@subsectionentry {0}{4}{6}{58}{Transition Approach}}
+\headcommand {\slideentry {4}{6}{1}{58/58}{Transition Approach}{0}}
 \headcommand {\beamer@framepages {58}{58}}
-\headcommand {\beamer@subsectionpages {55}{58}}
-\headcommand {\beamer@subsectionentry {0}{4}{6}{59}{Transition Approach}}
-\headcommand {\slideentry {4}{6}{1}{59/59}{Transition Approach}{0}}
+\headcommand {\beamer@sectionpages {28}{58}}
+\headcommand {\beamer@subsectionpages {58}{58}}
+\headcommand {\sectionentry {5}{Remeasurement}{59}{Remeasurement}{0}}
+\headcommand {\slideentry {5}{0}{1}{59/59}{}{0}}
 \headcommand {\beamer@framepages {59}{59}}
-\headcommand {\beamer@sectionpages {28}{59}}
 \headcommand {\beamer@subsectionpages {59}{59}}
-\headcommand {\sectionentry {5}{Remeasurement}{60}{Remeasurement}{0}}
-\headcommand {\slideentry {5}{0}{1}{60/60}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{60}{Liability for Incurred Claim (LfIC)}}
+\headcommand {\slideentry {5}{1}{1}{60/60}{Liability for Incurred Claim (LfIC)}{0}}
 \headcommand {\beamer@framepages {60}{60}}
-\headcommand {\beamer@subsectionpages {60}{60}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{61}{Liability for Incurred Claim (LfIC)}}
-\headcommand {\slideentry {5}{1}{1}{61/61}{Liability for Incurred Claim (LfIC)}{0}}
+\headcommand {\slideentry {5}{1}{2}{61/61}{Liability for Incurred Claim (LfIC)}{0}}
 \headcommand {\beamer@framepages {61}{61}}
-\headcommand {\slideentry {5}{1}{2}{62/62}{Liability for Incurred Claim (LfIC)}{0}}
+\headcommand {\beamer@sectionpages {59}{61}}
+\headcommand {\beamer@subsectionpages {60}{61}}
+\headcommand {\sectionentry {6}{Financial Disclosure and Statement Mapping}{62}{Financial Disclosure and Statement Mapping}{0}}
+\headcommand {\slideentry {6}{0}{1}{62/62}{}{0}}
 \headcommand {\beamer@framepages {62}{62}}
-\headcommand {\beamer@sectionpages {60}{62}}
-\headcommand {\beamer@subsectionpages {61}{62}}
-\headcommand {\sectionentry {6}{Financial Disclosure and Statement Mapping}{63}{Financial Disclosure and Statement Mapping}{0}}
-\headcommand {\slideentry {6}{0}{1}{63/63}{}{0}}
+\headcommand {\slideentry {6}{0}{2}{63/63}{}{0}}
 \headcommand {\beamer@framepages {63}{63}}
-\headcommand {\slideentry {6}{0}{2}{64/64}{}{0}}
+\headcommand {\slideentry {6}{0}{3}{64/64}{}{0}}
 \headcommand {\beamer@framepages {64}{64}}
-\headcommand {\slideentry {6}{0}{3}{65/65}{}{0}}
+\headcommand {\slideentry {6}{0}{4}{65/65}{}{0}}
 \headcommand {\beamer@framepages {65}{65}}
-\headcommand {\slideentry {6}{0}{4}{66/66}{}{0}}
+\headcommand {\slideentry {6}{0}{5}{66/66}{}{0}}
 \headcommand {\beamer@framepages {66}{66}}
-\headcommand {\slideentry {6}{0}{5}{67/67}{}{0}}
-\headcommand {\beamer@framepages {67}{67}}
-\headcommand {\beamer@partpages {1}{67}}
-\headcommand {\beamer@subsectionpages {63}{67}}
-\headcommand {\beamer@sectionpages {63}{67}}
-\headcommand {\beamer@documentpages {67}}
-\headcommand {\gdef \inserttotalframenumber {61}}
+\headcommand {\beamer@partpages {1}{66}}
+\headcommand {\beamer@subsectionpages {62}{66}}
+\headcommand {\beamer@sectionpages {62}{66}}
+\headcommand {\beamer@documentpages {66}}
+\headcommand {\gdef \inserttotalframenumber {60}}

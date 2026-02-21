@@ -55,40 +55,7 @@
 \definecolor{wMidGray}{RGB}{130,130,130}
 \definecolor{wLightGray}{RGB}{225,225,225}
 \definecolor{wAccent}{RGB}{204,102,0}
-\definecolor{darkpanel}{RGB}{85,88,94}
-\definecolor{midgray}{RGB}{110,113,120}
-\definecolor{boxfill}{RGB}{208,210,213}
-\definecolor{bordergray}{RGB}{148,150,153}
-\tikzset{
-	leftbox/.style={rectangle, rounded corners=3pt,
-		draw=bordergray, fill=boxfill,
-		text width=1.6cm, align=center, font=\fontsize{5.5}{7}\selectfont,
-		inner sep=4pt, minimum height=1.4cm},
-	csmbox/.style={rectangle, rounded corners=14pt,
-		draw=white, fill=white,
-		text width=2.4cm, align=center, font=\fontsize{5.5}{7}\selectfont,
-		inner sep=6pt, minimum height=0.9cm},
-	bannerbox/.style={rectangle, rounded corners=3pt,
-		draw=none, fill=midgray,
-		text width=2.4cm, align=left, font=\fontsize{5.5}{7}\selectfont\color{white},
-		inner sep=5pt, minimum height=0.52cm},
-	subbox/.style={rectangle, rounded corners=2pt,
-		draw=none, fill=boxfill,
-		text width=2.25cm, align=left, font=\fontsize{5}{6.5}\selectfont,
-		inner sep=4pt, minimum height=0.6cm},
-	midbox/.style={rectangle, rounded corners=3pt,
-		draw=bordergray, fill=boxfill,
-		text width=2.1cm, align=center, font=\fontsize{5.5}{7}\selectfont,
-		inner sep=4pt, minimum height=0.9cm},
-	plbox/.style={rectangle, rounded corners=3pt,
-		draw=bordergray, fill=boxfill,
-		text width=1.65cm, align=center, font=\fontsize{5.5}{7}\selectfont,
-		inner sep=5pt, minimum height=1.4cm},
-	myarr/.style={-{Stealth[length=3pt,width=2.5pt]}, line width=0.6pt, darkpanel},
-	mydarr/.style={-{Stealth[length=3pt,width=2.5pt]}, line width=0.6pt, darkpanel, dashed},
-	myline/.style={line width=0.6pt, darkpanel},
-	mydline/.style={line width=0.6pt, darkpanel, dashed},
-}
+
 \usepackage[normalem]{ulem}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,fit,calc,decorations.pathreplacing,bending,backgrounds}
@@ -902,7 +869,7 @@ An insurer may use Premium Allocation Approach (PAA) if, and only if, at the inc
   \normalsize
 The component of PAA at initial recognition is:
 \begin{equation}
-\text{PAA} (0) = \text{Premium} (0) - \text{Acquisition Cost}
+\text{PAA} = \text{Premium Received} - \text{Acquisition Cost}
 \end{equation}
   \vspace{0.2em}
   \footnotesize
@@ -913,9 +880,13 @@ The component of PAA at initial recognition is:
 \end{frame}
 
 \subsection{Transition Approach}
-\begin{frame}{Bit of Bonus on Transition Approach}
-This is actually a set up to ending remarks. 
-FVA, FRA, MRA
+\begin{frame}{Transition Approach}
+It is not news that IFRS17 was published recently, and the old standard is IFRS4, so this section might not be relevant as time goes by since eventually all the insurance contract will used one particular transisition approach i.e., Full Retrospective Approach (FRA). But this transition approach can be useful later if one is doing Merger \& Acquisiton (M\&A). To put it simply, there are 3 transition approach, i.e.,:
+\begin{enumerate}
+	\item Full Retrospective Approach (FRA): insurance contract is measured under IFRS~17 since the contract issued.
+	\item Fair Value Approach (FVA): insurance contract is measured under IFRS~17 at transition date.
+	\item Modified Retrospective Approach (MRA): insurance contract is measured under IFRS~17 before transition date.
+\end{enumerate}
 \end{frame}
 
 \section{Remeasurement}
@@ -960,123 +931,18 @@ FVA, FRA, MRA
 
 \section{Financial Disclosure and Statement Mapping}
 
-\begin{frame}{Where does it show up in the financial statements?}
-  \begin{itemize}
-    \item \textbf{Balance sheet:} insurance contract assets or liabilities (and reinsurance assets).
-    \item \textbf{P\&L:}
-      \begin{itemize}
-        \item insurance service result (revenue, service expenses, onerous losses),
-        \item insurance finance income/expenses (unwind + discount-rate changes; presentation policy matters).
-      \end{itemize}
-    \item \textbf{Disclosures:} reconciliations/roll-forwards tying opening to closing balances.
-  \end{itemize}
+\begin{frame}{Presentation}
+We have learned how to calculate all the need and the next step is to record everything inside the balance sheet. The next logical question is that, in the case where we do remeasurement, where should we record the changes ? 
 \end{frame}
 
 \begin{frame}{Graph from EY IFRS17 Playbook}
 \centering
-\begin{tikzpicture}[scale = 0.9, x=1cm, y=1cm]
-	
-	% ============ NODE PLACEMENT ============
-	
-	% Left input box (center at x=-5.2, y=0.3)
-	\node[leftbox] (change) at (-5.2, 0.3)
-	{Change in estimates relating to future services};
-	
-	% Panel nodes (center at x=0)
-	\node[csmbox]    (csm)      at (0,  2.05)  {Contractual service margin};
-	\node[bannerbox] (banner)   at (0,  0.9)   {Fulfilment cash flows};
-	\node[subbox]    (futurecf) at (0,  0.28)  {Future cash flows (CFs)};
-	\node[subbox]    (ra)       at (0, -0.48)  {Risk adjustment (RA) for non-financial risk};
-	\node[subbox]    (disc)     at (0, -1.2)   {Discounting};
-	
-	% Dark panel background
-	\begin{scope}[on background layer]
-		\node[rectangle, rounded corners=8pt, fill=darkpanel,
-		fit=(csm)(banner)(futurecf)(ra)(disc),
-		inner xsep=12pt, inner ysep=13pt] (panel) {};
-	\end{scope}
-	
-	% Middle output column (center at x=4.0)
-	\node[midbox] (relcsm)   at (4.0,  2.05)  {Release of CSM};
-	\node[midbox] (changecf) at (4.0,  0.72)  {Change in CFs related to past and current services};
-	\node[midbox] (relra)    at (4.0, -0.35)  {Release of RA related to past and current services};
-	\node[midbox] (insexp)   at (4.0, -1.5)   {Insurance finance expense at locked in discount rate};
-	\node[midbox] (effdisc)  at (4.0, -2.55)  {Effect of changes in discount rates};
-	
-	% Right P&L column (center at x=7.0)
-	\node[plbox] (plins)    at (7.0,  0.88)  {\textbf{P\&L:} Insurance service result};
-	\node[plbox] (plfinexp) at (7.0, -1.5)   {\textbf{P\&L:} Insurance finance expense};
-	\node[plbox] (oci)      at (7.0, -2.55)  {Other comprehensive income};
-	
-	% "Onerous contacts" label
-	\node[font=\fontsize{5.5}{7}\selectfont] (onerous) at (4.8, 3.3) {Onerous contacts};
-	
-	% ============ ARROWS ============
-	
-	% change.east splits into two branches
-	% Upper: to CSM level
-	\draw[myline] (change.east) -- ++( 0.4, 0) coordinate (split);
-	\draw[myarr]  (split) |- (panel.west |- csm);
-	% Lower: to futurecf level
-	\draw[myarr]  (split) |- (panel.west |- futurecf);
-	
-	% Panel right edge to middle column
-	\draw[myarr] (panel.east |- csm)      -- (relcsm.west);
-	\draw[myarr] (panel.east |- futurecf) -- (changecf.west);
-	\draw[myarr] (panel.east |- ra)       -- (relra.west);
-	
-	% Discounting splits to insexp and effdisc
-	\draw[myline] (panel.east |- disc) -- ++(0.5, 0) coordinate (discsplit);
-	\draw[myarr]  (discsplit) |- (insexp.west);
-	\draw[myarr]  (discsplit) |- (effdisc.west);
-	
-	% Middle three boxes -> P&L Insurance service result
-	% Vertical collector at x = 5.8 (between midbox right edge ~5.13 and plins.west ~6.18)
-	\draw[myline] (relcsm.east)   -| (5.8,  2.05);
-	\draw[myline] (changecf.east) -| (5.8,  0.72);
-	\draw[myline] (relra.east)    -| (5.8, -0.35);
-	\draw[myline] (5.8,  2.05) -- (5.8, -0.35);
-	\draw[myarr]  (5.8,  0.88) -- (plins.west);
-	
-	% insexp -> plfinexp (solid)
-	\draw[myarr] (insexp.east) -- (plfinexp.west);
-	
-	% effdisc -> oci (dashed)
-	\draw[mydarr] (effdisc.east) -- (oci.west);
-	
-	% ============ ONEROUS CONTACTS DASHED BOX ============
-	% Loop: up from above change box, across top, down to plins.north
-	% Corners: TL above change.north-west, TR above plins.north-east
-	% Top y = 3.1
-	
-	% Onerous contacts dashed loop
-	% Use plins.east x for TR, change.west x for TL
-	% Top row y = 3.1
-	\coordinate (TL) at (-5.95, 3.1);
-	\coordinate (TR) at (7.85,  3.1);
-	
-	% Left vertical: from just above change.north-west up to TL
-	\draw[mydline] (-5.95, 1.12) -- (TL);
-	% Top horizontal across
-	\draw[mydline] (TL) -- (TR);
-	% Right vertical: straight down to plins.north
-	\draw[mydarr]  (TR) -- (7.85, 2.28) -- (plins.north -| {(7.85,0)}) -- (plins.north);
-	
-\end{tikzpicture}
+\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{EY Playbook.png}
 \end{frame}
 
-\begin{frame}{Remeasurement mapping (illustrative)}
-  \small
-  \begin{tabular}{@{}p{0.31\linewidth}p{0.31\linewidth}p{0.33\linewidth}@{}}
-  \toprule
-  \textbf{Driver} & \textbf{Actuarial output} & \textbf{Accounting impact} \\
-  \midrule
-  New claims information & Updated assumptions / triangles & Past service effect in service result; LfIC movement \\
-  Future-service assumption changes & Updated projection model & Unlock CSM (future service) and change in LfRC \\
-  Discount curve unwind / updates & Interest accretion / OCI option & Finance income/expense (P\&L and/or OCI) and remeasurement \\
-  Onerous recognition / LC & Profit testing & Immediate loss in P\&L; LC tracking in LfRC \\
-  \bottomrule
-  \end{tabular}
+\begin{frame}{Closing Remarks}
+\centering
+\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{iceberg.png}
 \end{frame}
 
 \begin{frame}{References}
