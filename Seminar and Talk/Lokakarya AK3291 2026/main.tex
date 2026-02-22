@@ -203,7 +203,7 @@ There are 3 approaches that auditor can do to verify the financial statement, i.
 Due to the size of data, auditor need to first verify the data given by the company. Whether it is 
 \begin{enumerate}
 \item \textbf{consistent}, does the amount noted is the same with the previous report or other document ?
-\item \textbf{sensicle}, e.g., does it normal for a life insurance to have a high amount of claim reserve ? does the change is similar with last year ? 
+\item \textbf{sensible}, e.g., does it normal for a life insurance to have a high amount of claim reserve ? does the change is similar with last year ? 
 \item \textbf{accurate}, does the amount in the financial statement is correctly copied or correctly calculated? 
 \item \textbf{complete}, has all the component in certain accounting item has fully calculated?
 \end{enumerate}
@@ -251,7 +251,7 @@ In my experience, the audit project usually goes like this \\
   \textbf{The company!}
   \end{center}   
   We can agree that all these calculation or this reporting is done by human who gives input to a machine and therefore it will always expose to human error. But by having a view on auditor as a co-worker rather than a piggybacking person, it can significantly improves the productivity of the company. \\
-  By having a well documented workflow, auditors can easily verify the result calculated and the actuaries can do more productive work.
+By having a well documented workflow, auditors can easily verify the result calculated and the actuaries can do more productive work.
 \end{frame}
 
 \section{Actuarial Science and Accounting}
@@ -285,7 +285,7 @@ It is said that doing IFRS17 would required at least 3 parties, i.e., accounting
 \end{frame}
 
 \section{Overview of IFRS~17}
-\begin{frame}{Where's My Money?}
+\begin{frame}{Life of a Premium}
   \begin{center}
   \begin{tikzpicture}[
     node distance=0mm and 4.5mm,
@@ -418,7 +418,7 @@ In the next slides, we will go deeper into how to calculate LfRC and LfIC.
 
   \vspace{0.2em}
   \footnotesize
-  \textit{Source: IFRS~17, Appendix A (Definitions).}
+  \textit{Source: IFRS~17, Appendix A (Definitions)}
 
   \vspace{0.4em}
   \normalsize
@@ -445,7 +445,8 @@ In the next slides, we will go deeper into how to calculate LfRC and LfIC.
 But how to determine the \textbf{significant insurance risk}?
 \end{frame}
 \begin{frame}[allowframebreaks]{What is an insurance contract (conceptually)?}
-Insurance risk is significant if and only if, an insured event could cause the issuer to pay \textbf{additional amounts} that are significant in any single scenario, excluding scenarios that have no commercial substance (i.e., no discernible effect on the economics of the transaction)... 
+Insurance risk is significant if and only if, an insured event could cause the issuer to pay \textbf{additional amounts} that are significant in any single scenario, excluding scenarios that have no commercial substance (i.e., no discernible effect on the economics of the transaction)
+... 
 \footnotesize
 \textit{Source: IFRS~17, Appendix B18}
 \normalsize
@@ -566,6 +567,9 @@ examples of such cash flows:
 \footnotesize
 \textit{Source: IFRS~17, Para. B65} \\
 \normalsize
+\begin{tcolorbox}[colback=green!5,colframe=green!40!black,title=Audit Checkbox]
+We usually check the assumptions are consistent with the experience study and all the calculated cashflow has aligned with the product specification or not. 
+\end{tcolorbox}
 \end{frame}
 \subsection{Discount Rate}
 \begin{frame}{Discount Rate}
@@ -588,7 +592,7 @@ Well yes, but according to IFRS~17, an entity shall use the a specific discount 
 \begin{enumerate}
   \item experience experience adjustments arising from premiums received in the period that relate to future service, and related cash flows such as insurance acquisition cash flows and premium-based taxes
   \item changes in estimates of the present value of the future cash flows in the LfRC except the effect of the time value of money and changes in the time value of money and the effect of financial risk and changes in financial risk
-  \item changes in the RA for non-financial risk that relate to future servic
+  \item changes in the RA for non-financial risk that relate to future service
 \end{enumerate} shall use discount rates determined on \textbf{initial recognition}
 \item for groups of contracts applying the premium allocation approach that have a significant financing component, to adjust the carrying amount of the LfRC applying: discount rates determined on \textbf{initial recognition}
 \item if an entity chooses to disaggregate Insurance Finance Income or Expenses (IFIE) between profit or loss and Other Comprehensive Income (OCI), to determine the amount of the IFIE included in profit or loss:
@@ -652,7 +656,7 @@ Simple illustration on the calculation
 
 \node[above] at (6.75, 1.6) {1-year};
 \node[above] at (6.75, 0.75) {forward rate};
-\node[above] at (6.75, 0.35) {= ``F''};
+\node[above] at (6.75, 0.35) {= $f$};
 
 % --- Bottom path: single arrow 0 to 2 ---
 \draw[red!80, line width=2pt, ->]
@@ -737,6 +741,9 @@ IFRS 17 does not specify the estimation technique(s) used to determine the RA. H
 \vspace{0.4em}
 \normalsize
 Most common techniques used in calculating RA is confidence level, Value at Risk (VaR), and Cost of Capital (CoC).
+\begin{tcolorbox}[colback=green!5,colframe=green!40!black,title=Audit Checkbox]
+We usually check the RA methodology is correct statistically and calculation is correct. 
+\end{tcolorbox}
 \end{frame} 
 \subsection{Contractual Service Margin (CSM)}
 \begin{frame}[allowframebreaks]{Contractual Service Margin (CSM) and Loss Component (LC)}
@@ -891,8 +898,13 @@ It is not news that IFRS17 was published recently, and the old standard is IFRS4
 
 \section{Remeasurement}
 \subsection{Liability for Incurred Claim (LfIC)}
+\begin{frame}{Life of a claim}
+The direct impact of issuing an insurance contract is to pay claim. But the claim itself has a lifecylce from accident to happened to insurance pay the claim.
+insert exam 5 topic on claim lifecylce
+\end{frame}
+
 \begin{frame}{Liability for Incurred Claim (LfIC)}
-  It is clear that there should not be a Liability for Incurred Claim (LfIC) at initial recognition since it implies that there is a claim directly after issuing the contract. LfIC only recorded after initial recognition or remeasurement. 
+It is clear from earlier definition that there should not be a Liability for Incurred Claim (LfIC) at initial recognition since it implies that there is a claim directly after issuing the contract. LfIC only recorded after initial recognition or remeasurement. 
 \end{frame}
 
 \begin{frame}{IBNR}
