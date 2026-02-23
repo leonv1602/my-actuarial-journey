@@ -1,12 +1,12 @@
 \beamer@sectionintoc {1}{Prolog: What is Actuarial Audit ?}{7}{0}{1}
-\beamer@sectionintoc {2}{Actuarial Science and Accounting}{19}{0}{2}
-\beamer@sectionintoc {3}{Overview of IFRS~17}{22}{0}{3}
-\beamer@sectionintoc {4}{Recognition and Measurement under IFRS~17}{28}{0}{4}
-\beamer@subsectionintoc {4}{1}{Level of Aggregation}{33}{0}{4}
-\beamer@subsectionintoc {4}{2}{Discount Rate}{39}{0}{4}
-\beamer@subsectionintoc {4}{3}{Risk Adjustment}{49}{0}{4}
-\beamer@subsectionintoc {4}{4}{Contractual Service Margin (CSM)}{52}{0}{4}
-\beamer@subsectionintoc {4}{5}{Measurement Model}{55}{0}{4}
+\beamer@sectionintoc {2}{Actuarial Science and Accounting}{17}{0}{2}
+\beamer@sectionintoc {3}{Overview of IFRS~17}{20}{0}{3}
+\beamer@sectionintoc {4}{Recognition and Measurement under IFRS~17}{26}{0}{4}
+\beamer@subsectionintoc {4}{1}{Level of Aggregation}{31}{0}{4}
+\beamer@subsectionintoc {4}{2}{Discount Rate}{37}{0}{4}
+\beamer@subsectionintoc {4}{3}{Risk Adjustment}{47}{0}{4}
+\beamer@subsectionintoc {4}{4}{Contractual Service Margin (CSM)}{50}{0}{4}
+\beamer@subsectionintoc {4}{5}{Measurement Model}{54}{0}{4}
 \beamer@subsectionintoc {4}{6}{Transition Approach}{58}{0}{4}
 \beamer@sectionintoc {5}{Remeasurement}{59}{0}{5}
 \beamer@subsectionintoc {5}{1}{Liability for Incurred Claim (LfIC)}{60}{0}{5}

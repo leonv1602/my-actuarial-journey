@@ -55,6 +55,10 @@
 \definecolor{wMidGray}{RGB}{130,130,130}
 \definecolor{wLightGray}{RGB}{225,225,225}
 \definecolor{wAccent}{RGB}{204,102,0}
+\definecolor{ibnrcol}{RGB}{220,90,20}
+\definecolor{rbnscol}{RGB}{34,139,34}
+\definecolor{paidcol}{RGB}{70,130,200}
+\definecolor{evalcol}{RGB}{180,20,20}
 
 \usepackage[normalem]{ulem}
 \usepackage{tikz}
@@ -154,31 +158,32 @@ Actuarial audit is just the subset of audit where the object audited is mostly p
 %\end{center}
 %\end{tcolorbox}
 \end{frame}
+
 %%%%% 
-\begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet - Life Insurance}
-Below is the Prudential Life snapshots of \href{https://www.prudentialplc.com/en/newsroom/company-news/2025/prudential-plc-2024-full-year-results/}{IFRS17 disclosure} access on 6 February 2026.
+%\begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet - Life Insurance}
+%Below is the Prudential Life snapshots of \href{https://www.prudentialplc.com/en/newsroom/company-news/2025/prudential-plc-2024-full-year-results/}{IFRS17 disclosure} access on 6 February 2026.
 
-  \begin{columns}[T,onlytextwidth]
-    \column{0.5\textwidth}
-      \centering
-      \includegraphics[width=0.98\linewidth,height=0.78\textheight,keepaspectratio]{FS Prudential - Asset.png}
+%  \begin{columns}[T,onlytextwidth]
+%    \column{0.5\textwidth}
+%      \centering
+%      \includegraphics[width=0.98\linewidth,height=0.78\textheight,keepaspectratio]{FS Prudential - Asset.png}%
 
-    \column{0.5\textwidth}
-      \centering
-      \includegraphics[width=0.98\linewidth,height=0.78\textheight,keepaspectratio]{FS Prudential - Liabilities and Equity.png}
-  \end{columns}
-Observe that the Insurance Contract Liabilities (ICL) are around 80\% of the total equity and liabilities, which makes it more important to verify whether the amount is correct.
-\end{frame}
+%    \column{0.5\textwidth}
+%      \centering
+%      \includegraphics[width=0.98\linewidth,height=0.78\textheight,keepaspectratio]{FS Prudential - Liabilities and Equity.png}
+%  \end{columns}
+%Observe that the Insurance Contract Liabilities (ICL) are around 80\% of the total equity and liabilities, which makes it more %important to verify whether the amount is correct.
+%\end{frame}
 
-\begin{frame}{Example of IFRS17 Financial Statement - Profit and Loss - Life Insurance}
-  \begin{center}
-  \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{PL Prudential.png}
-  \end{center} 
-Top 4 of the largest line items are investment return, net insurance and reinsurance finance expense, insurance revenue and insurance service expenses
-\end{frame}
+%\begin{frame}{Example of IFRS17 Financial Statement - Profit and Loss - Life Insurance}
+%  \begin{center}
+%  \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{PL Prudential.png}
+%  \end{center} 
+%Top 4 of the largest line items are investment return, net insurance and reinsurance finance expense, insurance revenue and %insurance service expenses
+%\end{frame}
 
-\begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet - General Insurance}
-Below is the Zurich Insurance snapshots of \href{https://edge.sitecorecloud.io/zurichinsur6934-zwpcorp-prod-ae5e/media/project/zurich/dotcom/investor-relations/docs/results/2024/q4/consolidated-financial-statements-annual-results-2024.pdf/}{IFRS17 disclosure} access on 9 February 2026.
+\begin{frame}{Example of IFRS17 Financial Statement - Balance Sheet - Life \& General Insurance}
+Below is the Zurich Insurance snapshots of \href{https://www.zurich.com/-/media-assets/project/zurich/dotcom/investor-relations/docs/results/2025/q4/consolidated-financial-statements-annual-results-2025.pdf/}{IFRS17 disclosure} access on 23 February 2026.
   \begin{columns}[T,onlytextwidth]
     \column{0.5\textwidth}
       \centering
@@ -191,7 +196,7 @@ Below is the Zurich Insurance snapshots of \href{https://edge.sitecorecloud.io/z
 Observe that the Insurance Contract Liabilities (ICL) is around 60\% of the total equity and liabilities, which make it more important to verify whether the amount is correct.
 \end{frame}
 
-\begin{frame}{Example of IFRS17 Financial Statement - Profit and Loss - General Insurance}
+\begin{frame}{Example of IFRS17 Financial Statement - Profit and Loss - Life \& General Insurance}
   \begin{center}
   \includegraphics[width=0.90\linewidth,height=0.7\textheight,keepaspectratio]{PL Zurich.png}
   \end{center} 
@@ -200,10 +205,11 @@ Observe that the Insurance Contract Liabilities (ICL) is around 60\% of the tota
 \begin{frame}[allowframebreaks]{Audit Challenge}
 Insurance company usually relies on software that deals with hundreds of thousands or even billions of rows of data and there is no way one can check all the data by the naked eye. This gives another challenge to auditors where the engagement is \textbf{relatively short} (3--5 months), but needs to verify all the business activities done by the company for a \textbf{certain period} (usually quarterly, semi-annually or annually). This means an auditor needs to be efficient with time, focus on high-risk items and communicate clearly what they need from the company.\\
 There are 3 approaches that auditor can do to verify the financial statement, i.e., \textbf{population}, \textbf{sample} and \textbf{analytical} and the most important item require before the audit is \textbf{data reconciliation}. \\
+\framebreak
 Due to the size of data, auditor need to first verify the data given by the company. Whether it is 
 \begin{enumerate}
 \item \textbf{consistent}, does the amount noted is the same with the previous report or other document ?
-\item \textbf{sensible}, e.g., does it normal for a life insurance to have a high amount of claim reserve ? does the change is similar with last year ? 
+\item \textbf{sensible}, e.g., is it normal to have a high amount of reinsurance contract liability ?
 \item \textbf{accurate}, does the amount in the financial statement is correctly copied or correctly calculated? 
 \item \textbf{complete}, has all the component in certain accounting item has fully calculated?
 \end{enumerate}
@@ -246,7 +252,7 @@ In my experience, the audit project usually goes like this \\
 \end{frame}
 
 \begin{frame}{Audit is A State of Mind}
-  Sure these things are the responsible for an auditor to check and the auditor will get paid by auditing the full year data. But who really responsible to ensure the data or the calculation done correctly? 
+ Sure these things are the responsible for an auditor to check and the auditor will get paid by auditing the full year data. But who really responsible to ensure the data or the calculation done correctly? 
   \begin{center}
   \textbf{The company!}
   \end{center}   
@@ -281,7 +287,7 @@ In (re)insurance one of the International Financial Reporting Standards (IFRS) w
   \item Disclosure: how to present the result in financial disclosures (accounting).
 \end{enumerate}
 Doing the actuarial audit, means that we need to check the \textbf{documentation, assumptions used} and whether it align with the \textbf{standards}.\\
-It is said that doing IFRS17 would required at least 3 parties, i.e., accounting, actuarial, and IT. We are going to see in this session why this will be the case.
+It is said that doing IFRS17 would required at least 3 parties, i.e., \textbf{accounting}, \textbf{actuarial}, and \textbf{IT}. We are going to see in this session why this will be the case.
 \end{frame}
 
 \section{Overview of IFRS~17}
@@ -746,7 +752,7 @@ We usually check the RA methodology is correct statistically and calculation is 
 \end{tcolorbox}
 \end{frame} 
 \subsection{Contractual Service Margin (CSM)}
-\begin{frame}[allowframebreaks]{Contractual Service Margin (CSM) and Loss Component (LC)}
+\begin{frame}[allowframebreaks]{Contractual Service Margin (CSM) and Loss Component (LC) - Initial Recognition}
 This is the bread and butter, the totally new concept introduced in the IFRS17. Contractual Service Margin (CSM) is a component of the carrying amount of the asset or liability for a \textbf{group of insurance contracts} representing the \textbf{unearned profit} the entity will recognise as it provides \textbf{insurance contract services} under the insurance contracts in the group. \\
   \vspace{0.2em}
   \footnotesize
@@ -764,7 +770,7 @@ We will revisit this in detail later in the remeasurement section.
 \pagestyle{empty}
 
 \begin{tikzpicture}[
-	scale=0.7,
+	scale=0.6,
 	every node/.style={font=\small\sffamily},
 	label/.style={font=\footnotesize\sffamily, align=center},
 	]
@@ -859,8 +865,25 @@ There are 3 measurement model, i.e.,
 \end{enumerate}
 \end{frame}
 
-\begin{frame}{VFA}
-  VFA — Direct participating contracts
+\begin{frame}{Variable Fee Approach (VFA)}
+Insurance contracts with direct participation features are insurance contracts that are substantially \textbf{investment-related} service contracts under which an entity promises an \textbf{investment return} based on underlying items. Hence, they
+are defined as insurance contracts for which:
+\begin{enumerate}
+	\item the contractual terms specify that the policyholder participates in a
+	share of a clearly identified pool of underlying items (see paragraphs
+	B105–B106);
+	\item the entity expects to pay to the policyholder an amount equal to a
+	substantial share of the fair value returns on the underlying items (see
+	paragraph B107); and
+	\item the entity expects a substantial proportion of any change in the
+	amounts to be paid to the policyholder to vary with the change in fair
+	value of the underlying items (see paragraph B107).
+\end{enumerate}
+  \footnotesize
+\textit{Source: IFRS~17, para. B101}\\
+\vspace{0.4em}
+\normalsize
+If an instrument contract pass these eligibility test, then the insurance contract must be measured using VFA.
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Premium Allocation Approach (PAA)}
@@ -883,7 +906,7 @@ The component of PAA at initial recognition is:
   \textit{Source: IFRS~17, para. 55}\\
   \vspace{0.4em}
   \normalsize
-  Which is way simpler than GMM model.
+  Which is way simpler than GMM model. It is an optional for an (re)insurer to apply PAA instead of GMM if insurance contract pass the eligibility test.
 \end{frame}
 
 \subsection{Transition Approach}
@@ -898,9 +921,17 @@ It is not news that IFRS17 was published recently, and the old standard is IFRS4
 
 \section{Remeasurement}
 \subsection{Liability for Incurred Claim (LfIC)}
-\begin{frame}{Life of a claim}
-The direct impact of issuing an insurance contract is to pay claim. But the claim itself has a lifecylce from accident to happened to insurance pay the claim.
-insert exam 5 topic on claim lifecylce
+\begin{frame}{Life of a Claim}
+The direct impact of issuing an insurance contract is to pay claim. But the claim itself has a lifecycle from accident to claim payment.
+The unpaid claims estimate includes five components: 
+\begin{enumerate}
+	\item case outstanding on known claims: refer to the estimates of unpaid claims established by the claims department, third-party adjusters, or independent adjusters for known and reported claims only 
+	\item provision for future development on known claims, 
+	\item estimate for reopened claims, 
+	\item provision for claims Incurred But Not Reported (IBNR), and 
+	\item provision for claims in transit (i.e., claims reported but not recorded)
+\end{enumerate}
+Actuaries refer to the sum of the item 2 through 5 as the broad definition of Incurred But Not Reported (IBNR). 
 \end{frame}
 
 \begin{frame}{Liability for Incurred Claim (LfIC)}
@@ -908,43 +939,132 @@ It is clear from earlier definition that there should not be a Liability for Inc
 \end{frame}
 
 \begin{frame}{IBNR}
-  			\begin{figure}
-				\centering  
-				\begin{tikzpicture}
-					% draw horizontal line   
-					\draw (0,0) -- (11,0);
-					% draw vertical lines
-					\foreach \x in {1,3,5,6,7,10}
-					\draw (\x cm,3pt) -- (\x cm,-3pt);
-					
-					% draw nodes
-					\draw (1,0) node[below=3pt] {$t_{\text{event}}$} node[above=3pt] {Event};
-					\draw (3,0) node[below=3pt] {$t_{\text{report}}$} node[above=3pt] {Report};
-					\draw (5,0) node[below=3pt] {$t_{1}$};
-					\draw (6,0) node[below=3pt] {$t_{2}$}node[above=0.7cm] {Claims Payments};
-					\draw (7,0) node[below=3pt] {$t_{3}$};
-					\draw (10,0) node[below=3pt] {$t_{\text{settlement}}$} node[above=12pt] {Claims Closing};
-					
-					% Draw Arrows 
-					\draw[->](7,0.6) -- (7,0);
-					\draw[->](6,0.6) -- (6,0);
-					\draw[->](5,0.6) -- (5,0);	
-					
-					% Draw Braces 
-					\draw [cyan, decorate, decoration = {brace, raise=5pt,	amplitude=5pt}] (3,-0.6) --  (1,-0.6) ;
-					\draw (2, -0.8) node[below=3pt] {\textcolor{cyan}{Reporting Delay}};
-					\draw [blue,decorate, decoration = {brace, raise=5pt,	amplitude=5pt}] (10,-0.6) --  (3,-0.6) ;
-					\draw (6.5, -0.8) node[below=3pt] {\textcolor{blue}{\textit{Settlement Delay}}};
-				\end{tikzpicture}
-	\end{figure} 
-  This event is what we call Incurred But Not (yet) Reported (IBNR). All IBNR claims will be the insurer's liability that will be reported in the financial statements. So the insurer needs to reserve the \textbf{right amount} of claim so that the reserve won't be too small (i.e., the insurer will not be able to pay claims) nor too large (i.e., the insurer's liability will be overstated).\\
-  Include reference to exam 5 material.
+\begin{figure}
+\begin{center}
+	\begin{tikzpicture}[>=Stealth, scale=0.8]
+		
+		%% ── Timeline axis ──────────────────────────────────────────
+		\draw[line width=1.8pt, ->] (0,0) -- (13.5,0);
+		
+		%% Key x positions
+		\def\xA{1.8}   % occurrence
+		\def\xB{5.0}   % report
+		\def\xC{8.5}   % evaluation (TODAY)
+		\def\xD{12.0}  % settlement
+		
+		%% Tick labels on axis
+		\foreach \x/\lbl in {
+			\xA/{Occurrence},
+			\xB/{Report},
+			\xC/{TODAY},
+			\xD/{Settlement}}{
+			\draw[line width=1pt] (\x,-0.12)--(\x,0.12);
+			\node[below, font=\small\bfseries] at (\x,-0.15) {\lbl};
+		}
+		
+		%% ── TODAY vertical line ────────────────────────────────────
+		\draw[evalcol, line width=1.5pt, dashed] (\xC,-0.8) -- (\xC,4.2);
+		
+		%% ══════════════════════════════════════════════════════════
+		%% CLAIM A  →  SETTLED (fully in the past, for reference)
+		%% ══════════════════════════════════════════════════════════
+		\def\yA{3.5}
+		\node[left, font=\footnotesize\bfseries] at (\xA-0.1,\yA) {Claim A};
+		
+		%% paid bar (occurrence → settlement, all before TODAY)
+		\fill[paidcol!30] (\xA,\yA-0.22) rectangle (6.5,\yA+0.22);
+		\draw[paidcol, line width=0.8pt] (\xA,\yA-0.22) rectangle (6.5,\yA+0.22);
+		\node[font=\tiny, text=paidcol] at ({(\xA+6.5)/2}, \yA) {Paid \& Settled};
+		
+		%% dots for occurrence and report
+		\filldraw[black] (\xA,\yA) circle (2.5pt);
+		\filldraw[black] (3.2,\yA) circle (2.5pt);
+		\node[above, font=\tiny] at (3.2,\yA+0.22) {rep};
+		
+		%% ══════════════════════════════════════════════════════════
+		%% CLAIM B  →  RBNS  (reported, still open at TODAY)
+		%% ══════════════════════════════════════════════════════════
+		\def\yB{2.2}
+		\node[left, font=\footnotesize\bfseries] at (\xA-0.1,\yB) {Claim B};
+		
+		%% paid portion (report → TODAY)
+		\fill[paidcol!30] (\xA,\yB-0.22) rectangle (\xC,\yB+0.22);
+		\draw[paidcol, line width=0.8pt] (\xA,\yB-0.22) rectangle (\xC,\yB+0.22);
+		\node[font=\tiny, text=paidcol] at ({(\xA+\xC)/2}, \yB) {Partially Paid};
+		
+		%% RBNS reserve portion (TODAY → settlement) — unknown future
+		\fill[rbnscol!25] (\xC,\yB-0.22) rectangle (\xD,\yB+0.22);
+		\draw[rbnscol, line width=1.2pt] (\xC,\yB-0.22) rectangle (\xD,\yB+0.22);
+		\node[font=\tiny\bfseries, text=rbnscol] at ({(\xC+\xD)/2}, \yB) {RBNS Reserve};
+		
+		%% dots
+		\filldraw[black] (\xA,\yB) circle (2.5pt);
+		\filldraw[black] (\xB-1.0,\yB) circle (2.5pt);
+		\node[above, font=\tiny] at (\xB-1.0,\yB+0.22) {rep};
+		
+		%% ══════════════════════════════════════════════════════════
+		%% CLAIM C  →  IBNR  (occurred but NOT YET reported at TODAY)
+		%% ══════════════════════════════════════════════════════════
+		\def\yC{0.9}
+		\node[left, font=\footnotesize\bfseries] at (\xA-0.1,\yC) {Claim C};
+		
+		%% occurrence to TODAY — insurer doesn't know this claim yet
+		\fill[ibnrcol!20] (\xB+0.5,\yC-0.22) rectangle (\xC,\yC+0.22);
+		\draw[ibnrcol, line width=1.2pt, densely dotted]
+		(\xB+0.5,\yC-0.22) rectangle (\xC,\yC+0.22);
+		\node[font=\tiny\bfseries, text=ibnrcol] at ({(\xB+0.5+\xC)/2}, \yC)
+		{Unknown to insurer};
+		
+		%% IBNR reserve portion (TODAY → future settlement)
+		\fill[ibnrcol!25] (\xC,\yC-0.22) rectangle (\xD+0.5,\yC+0.22);
+		\draw[ibnrcol, line width=1.2pt] (\xC,\yC-0.22) rectangle (\xD+0.5,\yC+0.22);
+		\node[font=\tiny\bfseries, text=ibnrcol] at ({(\xC+\xD+0.5)/2}, \yC)
+		{IBNR Reserve};
+		
+		%% occurrence dot only (no report dot — not yet reported)
+		\filldraw[black] (\xB+0.5,\yC) circle (2.5pt);
+		\node[above, font=\tiny] at (\xB+0.5,\yC+0.22) {occ};
+	
+		
+		%% ── Legend ─────────────────────────────────────────────────
+		\fill[paidcol!30] (0.5,-1.1) rectangle (1.1,-0.75);
+		\draw[paidcol,line width=0.8pt](0.5,-1.1) rectangle (1.1,-0.75);
+		\node[right,font=\scriptsize] at (1.15,-0.93){Paid amount};
+		
+		\fill[rbnscol!25] (4.0,-1.1) rectangle (4.6,-0.75);
+		\draw[rbnscol,line width=1.2pt](4.0,-1.1) rectangle (4.6,-0.75);
+		\node[right,font=\scriptsize,text=rbnscol] at (4.65,-0.93)
+		{\textbf{RBNS}: Reported But Not Settled};
+		
+		\fill[ibnrcol!25] (2.5,-1.6) rectangle (3.1,-1.25);
+		\draw[ibnrcol,line width=1.2pt](2.5,-1.6) rectangle (3.1,-1.25);
+		\node[right,font=\scriptsize,text=ibnrcol] at (3.15,-1.5)
+		{\textbf{IBNR}: Incurred But Not Reported};
+		
+	\end{tikzpicture}
+\end{center}
+\end{figure} 
+  Common actuarial model used to estimate IBNR is Mack's Chain Ladder, Expected Loss Ratio and Bornhuetter-Ferguson Method while for the RA, most common method is to use Bootstrapping method.
 \end{frame}
 
 \section{Financial Disclosure and Statement Mapping}
 
 \begin{frame}{Presentation}
-We have learned how to calculate all the need and the next step is to record everything inside the balance sheet. The next logical question is that, in the case where we do remeasurement, where should we record the changes ? 
+We have learned how to calculate all the need and the next step is to record everything inside the balance sheet. The next logical question is that, in the case where we do remeasurement, where should we record these changes ? 
+There are 3 components where these changes will be recorded. They are:
+\begin{enumerate}
+	\item Insurance Revenue: for the reduction in the LfRC because of services provided in the period (from valuation $t$ to $t+1$)
+	\item Insurance Service Expense (ISE): for 
+	\begin{enumerate}
+		\item losses on groups of onerous contracts, and reversals of such losses; (LfRC)
+		\item for the increase in the liability because of claims and expenses incurred in the period, excluding any investment components;  (LfIC)and
+		\item for any subsequent changes in FCF  relating to incurred claims and incurred expenses; (LfIC)
+	\end{enumerate}
+	\item Insurance Finance Income or Expense (IFIE): for the effect of the TVOM and the effect of financial risk
+\end{enumerate}
+\footnotesize
+\textit{Source: IFRS~17, Para. 41, 42}\\
+\normalsize
 \end{frame}
 
 \begin{frame}{Graph from EY IFRS17 Playbook}
@@ -964,6 +1084,11 @@ We have learned how to calculate all the need and the next step is to record eve
 
   \bibitem{eyplaybook}
   EY. \emph{Applying IFRS 17: A closer look at the new Insurance Contracts Standard} (``EY IFRS 17 playbook'' / guide).
+  
+  \bibitem{Friedland2010}
+  Friedland, J.F. (2010).
+  \textit{Estimating Unpaid Claims Using Basic Techniques} (3rd ed.).
+  Casualty Actuarial Society.
   \end{thebibliography}
 \end{frame}
 
