@@ -4,7 +4,7 @@
 \beamer@sectionintoc {4}{Recognition and Measurement under IFRS~17}{26}{0}{4}
 \beamer@subsectionintoc {4}{1}{Level of Aggregation}{31}{0}{4}
 \beamer@subsectionintoc {4}{2}{Discount Rate}{37}{0}{4}
-\beamer@subsectionintoc {4}{3}{Risk Adjustment}{47}{0}{4}
+\beamer@subsectionintoc {4}{3}{Risk Adjustment}{46}{0}{4}
 \beamer@subsectionintoc {4}{4}{Contractual Service Margin (CSM)}{50}{0}{4}
 \beamer@subsectionintoc {4}{5}{Measurement Model}{54}{0}{4}
 \beamer@subsectionintoc {4}{6}{Transition Approach}{58}{0}{4}

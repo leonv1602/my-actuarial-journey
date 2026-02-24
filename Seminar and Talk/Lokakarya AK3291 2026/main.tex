@@ -248,7 +248,7 @@ In my experience, the audit project usually goes like this \\
   \begin{center}
   \textbf{The company!}
   \end{center}   
-  We can agree that all these calculation or this reporting is done by human who gives input to a machine and therefore it will always expose to human error. But by having a view on auditor as a co-worker rather than a piggybacking person, it can significantly improves the productivity of the company. \\
+  We can agree that all these calculation or this reporting is done by human who gives input to a machine and therefore it will always expose to human error. But by having a view on auditor as a co-worker, it can significantly improves the productivity of the company. \\
 By having a well documented workflow, auditors can easily verify the result calculated and the actuaries can do more productive work.
 \end{frame}
 
@@ -582,27 +582,21 @@ The discount rates applied to the estimates of the future cash flows described p
 \normalsize
 \end{frame}
 \begin{frame}[allowframebreaks]{Discount Rate should be simple, isn't it ?}
-Well yes, but according to IFRS~17, an entity shall use the a specific discount rate to measure or determine specific item. For example: 
+According to IFRS~17 para B72 and B96, an entity shall use the a specific discount rate to measure or determine specific item. For example: 
 \begin{enumerate}
-  \item to measure the FCF: \textbf{current} discount rates
-  \item to determine the interest to accrete on the CSM for insurance contracts without direct participation features: discount rates determined at the \textbf{date of initial recognition} of a group of contracts.
-  \item to measure the changes to the CSM for insurance contracts without direct participation features of a group of insurance contracts for changes in FCF that relate to future, 
-\begin{enumerate}
-  \item experience adjustments arising from premiums received in the period that relate to future service, and related cash flows such as insurance acquisition cash flows and premium-based taxes
-  \item changes in estimates of the present value of the future cash flows in the LfRC except the effect of the time value of money and changes in the time value of money and the effect of financial risk and changes in financial risk
-  \item changes in the RA for non-financial risk that relate to future service
-\end{enumerate} shall use discount rates determined on \textbf{initial recognition}
-\item for groups of contracts applying the premium allocation approach that have a significant financing component, to adjust the carrying amount of the LfRC applying: discount rates determined on \textbf{initial recognition}
-\item if an entity chooses to disaggregate Insurance Finance Income or Expenses (IFIE) between profit or loss and Other Comprehensive Income (OCI), to determine the amount of the IFIE included in profit or loss:
-\begin{enumerate}
-  \item for groups of insurance contracts for which changes in assumptions that relate to financial risk \textbf{do not have a substantial effect} on the amounts paid to policyholders: discount rates determined at the \textbf{date of initial recognition} of a group of contracts, to nominal cash flows that do not vary based on the returns on any underlying items;
-\item for groups of insurance contracts for which changes in assumptions that relate to financial risk \textbf{have a substantial effect} on the amounts paid to policyholders, applying paragraph B132(a)(i)—discount rates that allocate the remaining revised expected finance income or expenses over the remaining duration of the group of contracts at a \textbf{constant rate}; and
-\item for groups of contracts applying the premium allocation approach: discount rates determined at the date of the \textbf{incurred claim}
+	\item \textbf{Current} discount rate: FCF measurement
+	\item Discount rate at \textbf{the date of initial recognition}:
+	\begin{enumerate}
+		\item CSM interest accretion for insurance contract without direct participation features
+		\item changes to CSM for insurance contracts without direct participation features that relate to future service
+		\begin{enumerate}
+			\item experience adjustments arising from premiums received in the period that relate to future service, and related cash flows such as IACF and premium-based taxes
+			\item changes in estimates of the present value of the future cash flows in the LfRC except the effect of the TVOM and changes in the TVOM and the effect of financial risk and changes in financial risk
+			\item changes in the RA that relate to future service
+		\end{enumerate} 
+	\item to adjust the carrying amount of the LfRC applying for groups of contracts applying the premium allocation approach that have a significant financing component
+	\end{enumerate}
 \end{enumerate}
-\end{enumerate}
-\footnotesize
-\textit{Source: IFRS~17, Para. B72} \\
-\normalsize
 So in fact, we will use different kind of discount for a different calculation. \\
 If you remember our previous slide, we learned that insurance contract can be grouped into one as long as the contracts issued no more than one year apart in the same group, so how do we determined the discount rate since there are several cases where the discount rate used is the discount rate determined at the date of initial recognition ? According to IFRS~17, para B73, an entity may use weighted-average discount rates over the period that contracts in the group are issued.\\
 It is also mentioned that some calculations are required to be calculated using discount rate which determined at the date of initial recognition, how to determine this discount rate?
@@ -717,6 +711,7 @@ The risk adjustment for non-financial risk for insurance contracts measures the 
 \textit{Source: IFRS~17, Appendix B87}\\
 \vspace{0.4em}
 \normalsize
+\framebreak
 Because the risk adjustment for non-financial risk reflects the compensation the entity would require for bearing the non-financial risk arising from the uncertain amount and timing of the cash flows, the risk adjustment for non-financial risk also reflects:
 \begin{enumerate}
 \item the degree of \textbf{diversification benefit} the entity includes when determining the compensation it requires for bearing that risk; and
@@ -726,7 +721,8 @@ Because the risk adjustment for non-financial risk reflects the compensation the
 \textit{Source: IFRS~17, Appendix B88}\\
 \vspace{0.4em}
 \normalsize
-IFRS 17 does not specify the estimation technique(s) used to determine the RA. However, to reflect the compensation the entity would require for bearing the non-financial risk, the RA shall have the following characteristics:
+\framebreak
+IFRS 17 does not specify the estimation technique(s) used to determine the RA. However, according to para B91 of the IFRS~17, to reflect the compensation the entity would require for bearing the non-financial risk, the RA shall have the following characteristics:
 \begin{enumerate} 
 \item risks with low frequency and high severity will result in higher risk adjustments for non-financial risk than risks with high frequency and low severity;
 \item for similar risks, contracts with a \textbf{longer duration} will result in \textbf{higher RA} than contracts with a shorter duration;
@@ -734,10 +730,6 @@ IFRS 17 does not specify the estimation technique(s) used to determine the RA. H
 \item the \textbf{less that is known} about the current estimate and its trend, \textbf{the higher will be the RA}; and
 \item to the extent that \textbf{emerging experience reduces uncertainty} about the amount and timing of cash flows, \textbf{RA will decrease} and vice versa.
 \end{enumerate}
-\footnotesize
-\textit{Source: IFRS~17, Appendix B91}\\
-\vspace{0.4em}
-\normalsize
 Most common techniques used in calculating RA is confidence level, Value at Risk (VaR), and Cost of Capital (CoC).
 \begin{tcolorbox}[colback=green!5,colframe=green!40!black,title=Audit Checkbox]
 We usually check the RA methodology is correct statistically and calculation is correct. 
@@ -745,7 +737,7 @@ We usually check the RA methodology is correct statistically and calculation is 
 \end{frame} 
 \subsection{Contractual Service Margin (CSM)}
 \begin{frame}[allowframebreaks]{Contractual Service Margin (CSM) and Loss Component (LC) - Initial Recognition}
-This is the bread and butter, the totally new concept introduced in the IFRS17. Contractual Service Margin (CSM) is a component of the carrying amount of the asset or liability for a \textbf{group of insurance contracts} representing the \textbf{unearned profit} the entity will recognise as it provides \textbf{insurance contract services} under the insurance contracts in the group. \\
+This is the new concept introduced in the IFRS17. Contractual Service Margin (CSM) is a component of the carrying amount of the asset or liability for a \textbf{group of insurance contracts} representing the \textbf{unearned profit} the entity will recognise as it provides \textbf{insurance contract services} under the insurance contracts in the group. \\
   \vspace{0.2em}
   \footnotesize
   \textit{Source: IFRS~17, Appendix A (Definitions)}\\
@@ -755,9 +747,8 @@ At initial recognition, if the group of contract is not onerous, CSM is calculat
 \begin{equation}
 \text{CSM} := \text{PVCF}_{\text{inflow}} - \text{PVCF}_{\text{outflow}} - \text{RA}
 \end{equation}
-If we look closely, this formula looks like the FCF calculation that we saw earlier. This is definitely intentional where it implicate that there is no profit to be recognized at inception. \\
+If we look closely, this formula looks like the FCF calculation that we saw earlier. This is definitely intentional where it implicate that there is \textbf{no profit} to be recognized \textbf{at inception}. (Why?)\\
 We also saw in earlier section, we learned that even at initial recognition there might be insurance contract where it is not profitable. This only happened if the CSM is negative and it will be called as Loss Component (LC).
-We will revisit this in detail later in the remeasurement section.
 \begin{center}
 \pagestyle{empty}
 
