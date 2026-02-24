@@ -15,17 +15,10 @@
     \end{beamercolorbox}%
   }%
 }
-\usepackage{pgfplots}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
-% Removed some rarely-used/conflicting packages for beamer to improve compatibility:
-% - chemarr, nomencl, float, wrapfig, subcaption
 \usepackage{mathtools}
-\usepackage{multirow}
-\usepackage[export]{adjustbox}
 \usepackage{graphicx}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
 \usepackage{xcolor}
 \setbeamertemplate{navigation symbols}{}
 % Custom colors
@@ -60,7 +53,6 @@
 \definecolor{paidcol}{RGB}{70,130,200}
 \definecolor{evalcol}{RGB}{180,20,20}
 
-\usepackage[normalem]{ulem}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,fit,calc,decorations.pathreplacing,bending,backgrounds}
 \usepackage[most]{tcolorbox}
@@ -69,7 +61,7 @@
 \title[IFRS 17 Actuarial Audit]{Introduction to Actuarial Audit under IFRS~17}
 \author{Leonardo Valentino Kosasih}
 \institute{Institut Teknologi Bandung}
-\date{\today}
+\date{27 February 2026}
 
 % Section divider at the start of each agenda section
 \AtBeginSection[]{
@@ -193,7 +185,7 @@ Below is the Zurich Insurance snapshots of \href{https://www.zurich.com/-/media-
       \centering
       \includegraphics[width=0.98\linewidth,height=0.78\textheight,keepaspectratio]{FS Zurich - Liabilities and Equity.png}
   \end{columns}
-Observe that the Insurance Contract Liabilities (ICL) is around 60\% of the total equity and liabilities, which make it more important to verify whether the amount is correct.
+Observe that the Insurance Contract Liabilities (ICL) is around 60\% of the total equity and liabilities, which makes it more important to verify whether the amount is correct.
 \end{frame}
 
 \begin{frame}{Example of IFRS17 Financial Statement - Profit and Loss - Life \& General Insurance}
@@ -203,14 +195,14 @@ Observe that the Insurance Contract Liabilities (ICL) is around 60\% of the tota
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Audit Challenge}
-Insurance company usually relies on software that deals with hundreds of thousands or even billions of rows of data and there is no way one can check all the data by the naked eye. This gives another challenge to auditors where the engagement is \textbf{relatively short} (3--5 months), but needs to verify all the business activities done by the company for a \textbf{certain period} (usually quarterly, semi-annually or annually). This means an auditor needs to be efficient with time, focus on high-risk items and communicate clearly what they need from the company.\\
-There are 3 approaches that auditor can do to verify the financial statement, i.e., \textbf{population}, \textbf{sample} and \textbf{analytical} and the most important item require before the audit is \textbf{data reconciliation}. \\
+Insurance companies usually rely on software that deals with hundreds of thousands or even billions of rows of data and there is no way one can check all the data by the naked eye. This gives another challenge to auditors where the engagement is \textbf{relatively short} (3--5 months), but need to verify all the business activities done by the company for a \textbf{certain period} (usually quarterly, semi-annually or annually). This means an auditor needs to be efficient with time, focus on high-risk items and communicate clearly what they need from the company.\\
+There are 3 approaches that auditors can use to verify the financial statements, i.e., \textbf{population}, \textbf{sample} and \textbf{analytical}; and the most important item required before the audit is \textbf{data reconciliation}. \\
 \framebreak
-Due to the size of data, auditor need to first verify the data given by the company. Whether it is 
+Due to the size of data, auditors need to first verify the data given by the company. Whether it is 
 \begin{enumerate}
-\item \textbf{consistent}, does the amount noted is the same with the previous report or other document ?
-\item \textbf{sensible}, e.g., is it normal to have a high amount of reinsurance contract liability ?
-\item \textbf{accurate}, does the amount in the financial statement is correctly copied or correctly calculated? 
+\item \textbf{consistent}, i.e., is the amount the same as in the previous report or other documents?
+\item \textbf{sensible}, e.g., is it normal to have a high amount of reinsurance contract liability?
+\item \textbf{accurate}, i.e., is the amount in the financial statement correctly copied or correctly calculated?
 \item \textbf{complete}, has all the component in certain accounting item has fully calculated?
 \end{enumerate}
 We can agree that it is tedious work to reconcile data over and over again. A particular tool that can help to capture/record the movement of the data is by doing a \textbf{waterfall  chart} or a \textit{walk} from the initial or verified amount into the most recent amount. 
@@ -287,7 +279,7 @@ In (re)insurance one of the International Financial Reporting Standards (IFRS) w
   \item Disclosure: how to present the result in financial disclosures (accounting).
 \end{enumerate}
 Doing the actuarial audit, means that we need to check the \textbf{documentation, assumptions used} and whether it align with the \textbf{standards}.\\
-It is said that doing IFRS17 would required at least 3 parties, i.e., \textbf{accounting}, \textbf{actuarial}, and \textbf{IT}. We are going to see in this session why this will be the case.
+It is said that doing IFRS17 would require at least 3 parties, i.e., \textbf{accounting}, \textbf{actuarial}, and \textbf{IT}. We are going to see in this session why this will be the case.
 \end{frame}
 
 \section{Overview of IFRS~17}
@@ -596,7 +588,7 @@ Well yes, but according to IFRS~17, an entity shall use the a specific discount 
   \item to determine the interest to accrete on the CSM for insurance contracts without direct participation features: discount rates determined at the \textbf{date of initial recognition} of a group of contracts.
   \item to measure the changes to the CSM for insurance contracts without direct participation features of a group of insurance contracts for changes in FCF that relate to future, 
 \begin{enumerate}
-  \item experience experience adjustments arising from premiums received in the period that relate to future service, and related cash flows such as insurance acquisition cash flows and premium-based taxes
+  \item experience adjustments arising from premiums received in the period that relate to future service, and related cash flows such as insurance acquisition cash flows and premium-based taxes
   \item changes in estimates of the present value of the future cash flows in the LfRC except the effect of the time value of money and changes in the time value of money and the effect of financial risk and changes in financial risk
   \item changes in the RA for non-financial risk that relate to future service
 \end{enumerate} shall use discount rates determined on \textbf{initial recognition}
@@ -673,7 +665,7 @@ Simple illustration on the calculation
 \end{tikzpicture}
 \end{center}
 \framebreak
-In Indonesia, the yield rate data is published by \href{https://www.phei.co.id/Data/HPW-dan-Imbal-Hasil}{Indonesia Bond Pricing Agency (IBPA)}. Due note that the rate in this website is \textbf{not} a zero-coupon rates, therefore we need to calculate the spot rate by ourselves using bootstraping method.
+In Indonesia, the yield rate data is published by \href{https://www.phei.co.id/Data/HPW-dan-Imbal-Hasil}{Indonesia Bond Pricing Agency (IBPA)}. Do note that the rates on this website are \textbf{not} zero-coupon rates; therefore we need to calculate spot rates ourselves using a bootstrapping method.
   \begin{columns}[T,onlytextwidth]
     \column{0.5\textwidth}
       \centering
@@ -911,7 +903,7 @@ The component of PAA at initial recognition is:
 
 \subsection{Transition Approach}
 \begin{frame}{Transition Approach}
-It is not news that IFRS17 was published recently, and the old standard is IFRS4, so this section might not be relevant as time goes by since eventually all the insurance contract will used one particular transisition approach i.e., Full Retrospective Approach (FRA). But this transition approach can be useful later if one is doing Merger \& Acquisiton (M\&A). To put it simply, there are 3 transition approach, i.e.,:
+It is not news that IFRS17 was published recently, and the old standard is IFRS4, so this section might become less relevant over time since eventually all insurance contracts will use one particular transition approach, i.e., the Full Retrospective Approach (FRA). However, the transition approaches can be useful if one is doing Merger \& Acquisition (M\&A). To put it simply, there are 3 transition approaches, i.e.,:
 \begin{enumerate}
 	\item Full Retrospective Approach (FRA): insurance contract is measured under IFRS~17 since the contract issued.
 	\item Fair Value Approach (FVA): insurance contract is measured under IFRS~17 at transition date.
