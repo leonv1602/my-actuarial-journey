@@ -10,7 +10,15 @@ Computation and stochastic simulation in insurance, machine learning and deep le
 # Contact  
 Feel free to contact me via LinkedIn ([My LinkedIn Profile](https://www.linkedin.com/in/leonardo-valentino-kosasih-4203a1182/)).
 
-# Ideas so Far per 14 Jan 26
+# Ideas so Far per 23 Mar 26
+## High Priority
+1. Lapse rate modelling
+2. Severity modelling using PyTorch
+
+## Mid Priority
 1. Create Premium Allocation Approach calculation model with dummy data and their reconciliation for remeasurement.  
 2. How to make a LfIC (Liability for Incurred Claim) calculation and how it impact financial disclosure.  
 3. Understand [wedge product concept](https://substack.com/@agussudjianto/p-184606453)
+
+## Low Priority
+1. Clean up and enhance latest talk's deck
