@@ -1,6 +1,9 @@
 # my-actuarial-journey
 This is a repository where I document my thoughts, learning progress and things that I find interesting to share. Full hand-written python (and occasionally R) code.
 
+# Quick Update per 17 September 2026
+This is long overdue but I have been busy with work, studying for exams, and writing research paper that I have been neglecting this repository a bit. There are still so much more things that I want to learn about and write here. But I am not sure whether I can add 1-2 more content for this year because I am thinking to apply to MMath in Actuarial Science in University of Waterloo. Upcoming days will be full with studying IELTS and exam 5 as well as finishing the research paper I have procrastinate for 3 months. Thanks for reading !
+
 # My Background  
 I currently work as a senior risk consultant at Ernst & Young Indonesia. I handle IFRS17 (mainly life insurance), and IAS19 (employee benefit). I went to Institut Teknologi Bandung (ITB) majoring in actuarial science in 2018 and graduated in 2022. 
 
